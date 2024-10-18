@@ -26,16 +26,18 @@
             pkgs.vscode
             pkgs.slack
             pkgs.spotify
+            pkgs.google-chrome
           ];
 
           homebrew = {
             enable = true;
             brews = [ "mas" ];
-            casks = [ "firefox" ];
+            casks = [
+              # "firefox"
+            ];
             masApps = {
               "Boop" = 1518425043;
             };
-            # TODO: uncomment when setting up a new system
             # onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
             onActivation.upgrade = true;
@@ -65,7 +67,8 @@
           system.defaults = {
             dock.persistent-apps = [
               "/System/Applications/Launchpad.app"
-              "/Applications/Firefox.app"
+              "/Applications/Google Chrome.app"
+              # "/Applications/Firefox.app"
               "${pkgs.slack}/Applications/Slack.app"
               "/System/Applications/Utilities/Terminal.app"
               "${pkgs.vscode}/Applications/Visual Studio Code.app"
