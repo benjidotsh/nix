@@ -6,6 +6,8 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -14,6 +16,7 @@
       nix-darwin,
       nixpkgs,
       nix-homebrew,
+      home-manager,
     }:
     let
       configuration =
@@ -99,6 +102,11 @@
 
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
+
+          users.users.bejanssens = {
+            name = "bejanssens";
+            home = "/Users/bejanssens";
+          };
         };
     in
     {
@@ -122,6 +130,12 @@
               # Automatically migrate existing Homebrew installations
               autoMigrate = true;
             };
+          }
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.bejanssens = import ./home.nix;
           }
         ];
       };
