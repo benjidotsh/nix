@@ -40,6 +40,7 @@
             ];
             masApps = {
               "Boop" = 1518425043;
+              "Spark" = 1176895641;
             };
             # onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
@@ -71,6 +72,7 @@
             dock.persistent-apps = [
               "/System/Applications/Launchpad.app"
               "/Applications/Google Chrome.app"
+              "/Applications/Spark.app"
               # "/Applications/Firefox.app"
               "${pkgs.slack}/Applications/Slack.app"
               "/System/Applications/Utilities/Terminal.app"
