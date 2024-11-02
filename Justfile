@@ -1,7 +1,6 @@
 # just is a command runner, Justfile is very similar to Makefile, but simpler.
 
-# TODO update hostname here!
-hostname := "your-hostname"
+hostname := "BEP6NDVF74Q5"
 
 ############################################################################
 #
@@ -9,21 +8,14 @@ hostname := "your-hostname"
 #
 ############################################################################
 
-#  TODO Feel free to remove this target if you don't need a proxy to speed up the build process
 [group('desktop')]
-darwin-set-proxy:
-  sudo python3 scripts/darwin_set_proxy.py
-
-[group('desktop')]
-darwin: darwin-set-proxy
-  nix build .#darwinConfigurations.{{hostname}}.system \
+darwin: nix build .#darwinConfigurations.{{hostname}}.system \
     --extra-experimental-features 'nix-command flakes'
 
   ./result/sw/bin/darwin-rebuild switch --flake .#{{hostname}}
 
 [group('desktop')]
-darwin-debug: darwin-set-proxy
-  nix build .#darwinConfigurations.{{hostname}}.system --show-trace --verbose \
+darwin-debug: nix build .#darwinConfigurations.{{hostname}}.system --show-trace --verbose \
     --extra-experimental-features 'nix-command flakes'
 
   ./result/sw/bin/darwin-rebuild switch --flake .#{{hostname}} --show-trace --verbose
