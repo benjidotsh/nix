@@ -32,9 +32,9 @@
       pull.rebase = true;
     };
 
-    signing = {
-      signByDefault = true;
-    };
+    # signing = {
+    #   signByDefault = true;
+    # };
 
     delta = {
       enable = true;

@@ -3,7 +3,7 @@
     enable = true;
     enableCompletion = true;
     initExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+      # export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
 
       # Node Version Manager
       export NVM_DIR="$HOME/.nvm"
