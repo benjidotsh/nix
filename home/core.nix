@@ -1,71 +1,28 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    # archives
-    zip
-    xz
-    unzip
-    p7zip
-
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-    jq # A lightweight and flexible command-line JSON processor
-    yq-go # yaml processer https://github.com/mikefarah/yq
-    fzf # A command-line fuzzy finder
-
-    aria2 # A lightweight multi-protocol & multi-source command-line download utility
-    socat # replacement of openbsd-netcat
-    nmap # A utility for network discovery and security auditing
-
-    # misc
-    cowsay
-    file
-    which
-    tree
-    gnused
-    gnutar
-    gawk
-    zstd
-    caddy
-    gnupg
-
-    # productivity
-    glow # markdown previewer in terminal
-  ];
-
   programs = {
-    # modern vim
-    neovim = {
+    # Visual Studio Code
+    vscode = {
       enable = true;
-      defaultEditor = true;
-      vimAlias = true;
-    };
+      extensions = [
+        pkgs.vscode-extensions.esbenp.prettier-vscode
+        pkgs.vscode-extensions.dbaeumer.vscode-eslint
+      ];
+      userSettings = {
+        # Visual Studio Code
+        "workbench.startupEditor" = "none";
+        "security.workspace.trust.enabled" = false;
 
-    # A modern replacement for ‘ls’
-    # useful in bash/zsh prompt, not in nushell.
-    eza = {
-      enable = true;
-      git = true;
-      icons = true;
-      enableZshIntegration = true;
-    };
+        # Prettier
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "editor.formatOnSave" = true;
+        "prettier.requireConfig" = true;
 
-    # terminal file manager
-    yazi = {
-      enable = true;
-      enableZshIntegration = true;
-      settings = {
-        manager = {
-          show_hidden = true;
-          sort_dir_first = true;
+        # ESLint
+        "editor.codeActionsOnSave" = {
+          "source.fixAll" = "explicit";
         };
       };
-    };
-
-    # skim provides a single executable: sk.
-    # Basically anywhere you would want to use grep, try sk instead.
-    skim = {
-      enable = true;
-      enableBashIntegration = true;
+      mutableExtensionsDir = false;
     };
   };
 }
