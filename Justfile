@@ -1,6 +1,10 @@
-# just is a command runner, Justfile is very similar to Makefile, but simpler.
+# just is a command runner, justfile is very similar to Makefile, but simpler.
 
 hostname := "BEP6NDVF74Q5"
+
+# List all the just commands
+default:
+  @just --list
 
 ############################################################################
 #
@@ -9,14 +13,14 @@ hostname := "BEP6NDVF74Q5"
 ############################################################################
 
 [group('desktop')]
-darwin:
+deploy:
   nix build .#darwinConfigurations.{{hostname}}.system \
     --extra-experimental-features 'nix-command flakes'
 
   ./result/sw/bin/darwin-rebuild switch --flake .#{{hostname}}
 
 [group('desktop')]
-darwin-debug:
+deploy-debug:
   nix build .#darwinConfigurations.{{hostname}}.system --show-trace --verbose \
     --extra-experimental-features 'nix-command flakes'
 
@@ -27,10 +31,6 @@ darwin-debug:
 #  nix related commands
 #
 ############################################################################
-
-# List all the just commands
-default:
-    @just --list
 
 # Update all the flake inputs
 [group('nix')]
