@@ -29,7 +29,6 @@
       #   https://github.com/yannbertrand/macos-defaults
       NSGlobalDomain = {
         # `defaults read NSGlobalDomain "xxx"`
-        AppleInterfaceStyle = "Dark";
         NSAutomaticSpellingCorrectionEnabled = false;
       };
 

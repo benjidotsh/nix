@@ -15,7 +15,7 @@
   home.shellAliases = {
   };
 
-  home.activation.createNvmDir = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    mkdir ~/.nvm
-  '';
+  # home.activation.createNvmDir = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  #   mkdir ~/.nvm
+  # '';
 }
