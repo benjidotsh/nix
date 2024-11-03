@@ -1,10 +1,8 @@
-{lib, ...}: {
+{...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     initExtra = ''
-      # export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-
       # Node Version Manager
       export NVM_DIR="$HOME/.nvm"
       [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
@@ -14,8 +12,4 @@
 
   home.shellAliases = {
   };
-
-  # home.activation.createNvmDir = lib.hm.dag.entryAfter ["writeBoundary"] ''
-  #   mkdir ~/.nvm
-  # '';
 }

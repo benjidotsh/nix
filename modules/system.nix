@@ -66,4 +66,14 @@
   environment.shells = [
     pkgs.zsh
   ];
+
+  fonts = {
+    packages = with pkgs; [
+      (nerdfonts.override {
+        fonts = [
+          "FiraCode"
+        ];
+      })
+    ];
+  };
 }

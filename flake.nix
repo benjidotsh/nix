@@ -20,6 +20,8 @@
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
+
+    mac-app-util.url = "github:hraban/mac-app-util";
   };
 
   # The `outputs` function will return all the build results of the flake.
@@ -32,6 +34,7 @@
     nixpkgs,
     darwin,
     home-manager,
+    mac-app-util,
     ...
   }: let
     username = "bejanssens";
@@ -61,6 +64,22 @@
           home-manager.extraSpecialArgs = specialArgs;
           home-manager.users.${username} = import ./home;
         }
+
+        mac-app-util.darwinModules.default
+
+        home-manager.darwinModules.home-manager
+        (
+          {
+            pkgs,
+            config,
+            inputs,
+            ...
+          }: {
+            home-manager.sharedModules = [
+              mac-app-util.homeManagerModules.default
+            ];
+          }
+        )
       ];
     };
 
