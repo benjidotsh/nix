@@ -16,28 +16,25 @@
     enable = true;
     lfs.enable = true;
 
-    # TODO replace with your own name & email
     userName = username;
     userEmail = useremail;
 
     includes = [
       {
-        # use diffrent email & name for work
-        path = "~/work/.gitconfig";
-        condition = "gitdir:~/work/";
+        # use a different config for work
+        path = "~/DPG/.gitconfig";
+        condition = "gitdir:~/DPG/";
       }
     ];
 
     extraConfig = {
-      init.defaultBranch = "main";
       push.autoSetupRemote = true;
       pull.rebase = true;
     };
 
-    # signing = {
-    #   key = "xxx";
-    #   signByDefault = true;
-    # };
+    signing = {
+      signByDefault = true;
+    };
 
     delta = {
       enable = true;
