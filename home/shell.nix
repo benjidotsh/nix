@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -14,4 +14,8 @@
 
   home.shellAliases = {
   };
+
+  home.activation.createNvmDir = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    mkdir ~/.nvm
+  '';
 }
