@@ -34,7 +34,7 @@
         ];
 
         # hot corners
-        wvous-br-corner = 0; # bottom-right - disabled
+        wvous-br-corner = null; # bottom-right - disabled
       };
 
       # customize settings that not supported by nix-darwin directly
