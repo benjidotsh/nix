@@ -22,6 +22,8 @@
     };
 
     mac-app-util.url = "github:hraban/mac-app-util";
+
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
   # The `outputs` function will return all the build results of the flake.
@@ -35,6 +37,7 @@
     darwin,
     home-manager,
     mac-app-util,
+    nix-homebrew,
     ...
   }: let
     username = "bejanssens";
@@ -80,6 +83,25 @@
             ];
           }
         )
+
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            # Install Homebrew under the default prefix
+            enable = true;
+
+            # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+            enableRosetta = true;
+
+            # User owning the Homebrew prefix
+            user = username;
+
+            # Optional: Enable fully-declarative tap management
+            #
+            # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
+            mutableTaps = false;
+          };
+        }
       ];
     };
 
