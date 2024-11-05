@@ -24,7 +24,6 @@
       "Messenger" = 1480068668;
       "WhatsApp Messenger" = 310633997;
       "The Unarchiver" = 425424353;
-      "Wipr" = 1320666476;
     };
 
     # `brew install`
@@ -35,7 +34,7 @@
 
     # `brew install --cask`
     casks = [
-      "google-chrome"
+      "firefox"
       "discord"
       "spotify"
       "orbstack"

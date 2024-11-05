@@ -3,6 +3,8 @@
     enable = true;
     enableCompletion = true;
     initExtra = ''
+      export PATH="$PATH:/opt/homebrew/bin"
+
       # Node Version Manager
       export NVM_DIR="$HOME/.nvm"
       [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm

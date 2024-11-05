@@ -22,6 +22,15 @@
     defaults = {
       dock = {
         show-recents = false;
+        persistent-apps = [
+          "/System/Applications/Launchpad.app"
+          "/Applications/Firefox.app"
+          "/Applications/Spark.app"
+          "/Applications/Slack.app"
+          "${pkgs.vscode}/Applications/Visual Studio Code.app"
+          "/System/Applications/Utilities/Terminal.app"
+          "/Applications/Spotify.app"
+        ];
       };
 
       # customize settings that not supported by nix-darwin directly
@@ -30,6 +39,7 @@
       NSGlobalDomain = {
         # `defaults read NSGlobalDomain "xxx"`
         NSAutomaticSpellingCorrectionEnabled = false;
+        AppleInterfaceStyle = "Dark";
       };
 
       # Customize settings that not supported by nix-darwin directly
@@ -53,6 +63,10 @@
         #   askForPassword = 1;
         #   askForPasswordDelay = 0;
         # };
+      };
+
+      menuExtraClock = {
+        ShowSeconds = true;
       };
     };
   };

@@ -4,6 +4,7 @@
     extensions = [
       pkgs.vscode-extensions.esbenp.prettier-vscode
       pkgs.vscode-extensions.dbaeumer.vscode-eslint
+      pkgs.vscode-extensions.eamodio.gitlens
     ];
     userSettings = {
       # Visual Studio Code
