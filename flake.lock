@@ -125,6 +125,70 @@
         "type": "github"
       }
     },
+    "homebrew-bundle": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730831057,
+        "narHash": "sha256-E8YKqwIYVlM4X+3jUdfIaKvxI0TFdElakcNyuWxM39U=",
+        "owner": "homebrew",
+        "repo": "homebrew-bundle",
+        "rev": "14960d21b313b8df99b5826c50fa394b54760245",
+        "type": "github"
+      },
+      "original": {
+        "owner": "homebrew",
+        "repo": "homebrew-bundle",
+        "type": "github"
+      }
+    },
+    "homebrew-cask": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730834074,
+        "narHash": "sha256-8Gijkpb1tyTHwVaCmCuvv48/7QD7/YuKIGvIwSzzKpY=",
+        "owner": "homebrew",
+        "repo": "homebrew-cask",
+        "rev": "7ee2e0d5f652af305c0ae6e41b3a813c0dfbcc1e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "homebrew",
+        "repo": "homebrew-cask",
+        "type": "github"
+      }
+    },
+    "homebrew-core": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730837186,
+        "narHash": "sha256-FeQOYBXsoVyTc+P3EeB4enMvQQ6f9PQFNPEUmD3MhJM=",
+        "owner": "homebrew",
+        "repo": "homebrew-core",
+        "rev": "df3d712f88490366f44279cc667a9cc20c555913",
+        "type": "github"
+      },
+      "original": {
+        "owner": "homebrew",
+        "repo": "homebrew-core",
+        "type": "github"
+      }
+    },
+    "homebrew-granted": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730703580,
+        "narHash": "sha256-iCIQkRWZPs9n2StUGMGQeq3N2g8DTzPI25iQzhjo8Xc=",
+        "owner": "common-fate",
+        "repo": "homebrew-granted",
+        "rev": "126b656e8f5789a320c57a7bb355f0e9a236be2b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "common-fate",
+        "repo": "homebrew-granted",
+        "type": "github"
+      }
+    },
     "mac-app-util": {
       "inputs": {
         "cl-nix-lite": "cl-nix-lite",
@@ -263,6 +327,10 @@
       "inputs": {
         "darwin": "darwin",
         "home-manager": "home-manager",
+        "homebrew-bundle": "homebrew-bundle",
+        "homebrew-cask": "homebrew-cask",
+        "homebrew-core": "homebrew-core",
+        "homebrew-granted": "homebrew-granted",
         "mac-app-util": "mac-app-util",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_4",

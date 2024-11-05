@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   environment.variables.EDITOR = "code --wait";
 
   # The apps installed by homebrew are not managed by nix, and not reproducible!
@@ -30,6 +30,8 @@
     brews = [
       "just"
       "nvm"
+      "awscli"
+      "granted"
     ];
 
     # `brew install --cask`
@@ -42,5 +44,8 @@
       "httpie"
       "1password"
     ];
+
+    # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
+    taps = builtins.attrNames config.nix-homebrew.taps;
   };
 }
