@@ -20,6 +20,9 @@
       "editor.codeActionsOnSave" = {
         "source.fixAll" = "explicit";
       };
+
+      # GitLens
+      "gitlens.codeLens.enabled" = false;
     };
     mutableExtensionsDir = false;
   };

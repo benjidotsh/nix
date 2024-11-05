@@ -22,6 +22,7 @@
     defaults = {
       dock = {
         show-recents = false;
+
         persistent-apps = [
           "/System/Applications/Launchpad.app"
           "/Applications/Firefox.app"
@@ -31,6 +32,9 @@
           "/System/Applications/Utilities/Terminal.app"
           "/Applications/Spotify.app"
         ];
+
+        # hot corners
+        wvous-br-corner = 0; # bottom-right - disabled
       };
 
       # customize settings that not supported by nix-darwin directly
