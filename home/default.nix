@@ -2,6 +2,7 @@
   # import sub modules
   imports = [
     ./shell.nix
+    ./core.nix
     ./vscode.nix
     ./git.nix
     ./starship.nix
