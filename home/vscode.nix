@@ -6,6 +6,7 @@
       pkgs.vscode-extensions.dbaeumer.vscode-eslint
       pkgs.vscode-extensions.eamodio.gitlens
       pkgs.vscode-extensions.jnoortheen.nix-ide
+      pkgs.vscode-extensions.mkhl.direnv
 
       # Catppuccin
       pkgs.vscode-extensions.catppuccin.catppuccin-vsc

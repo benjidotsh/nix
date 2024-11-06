@@ -35,6 +35,9 @@
 
         # hot corners
         wvous-br-corner = null; # bottom-right - disabled
+
+        # icon size
+        tilesize = 64;
       };
 
       # customize settings that not supported by nix-darwin directly

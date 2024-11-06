@@ -32,6 +32,7 @@
       "nvm"
       "awscli"
       "folderify"
+      "sops"
     ];
 
     # `brew install --cask`
