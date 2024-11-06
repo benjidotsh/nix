@@ -31,7 +31,7 @@
       "just"
       "nvm"
       "awscli"
-      "granted"
+      "folderify"
     ];
 
     # `brew install --cask`
@@ -43,6 +43,7 @@
       "postgres-unofficial"
       "httpie"
       "1password"
+      "leapp"
     ];
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
