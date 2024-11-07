@@ -1,16 +1,21 @@
 {pkgs, ...}: {
   programs.vscode = {
     enable = true;
-    extensions = [
-      pkgs.vscode-extensions.esbenp.prettier-vscode
-      pkgs.vscode-extensions.dbaeumer.vscode-eslint
-      pkgs.vscode-extensions.eamodio.gitlens
-      pkgs.vscode-extensions.jnoortheen.nix-ide
-      pkgs.vscode-extensions.mkhl.direnv
+    extensions = with pkgs.vscode-marketplace;
+    with pkgs.vscode-marketplace-release; [
+      esbenp.prettier-vscode
+      dbaeumer.vscode-eslint
+      eamodio.gitlens
+      jnoortheen.nix-ide
+      mkhl.direnv
 
       # Catppuccin
-      pkgs.vscode-extensions.catppuccin.catppuccin-vsc
-      pkgs.vscode-extensions.catppuccin.catppuccin-vsc-icons
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
+
+      # GitHub Copilot
+      github.copilot
+      github.copilot-chat
     ];
     userSettings = {
       # Visual Studio Code

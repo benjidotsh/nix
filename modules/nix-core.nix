@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  nix-vscode-extensions,
   ...
 }: {
   # enable flakes globally
@@ -29,4 +30,8 @@
   nix.settings = {
     auto-optimise-store = false;
   };
+
+  nixpkgs.overlays = [
+    nix-vscode-extensions.overlays.default
+  ];
 }

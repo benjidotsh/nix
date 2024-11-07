@@ -23,7 +23,10 @@
 
     mac-app-util.url = "github:hraban/mac-app-util";
 
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    nix-homebrew = {
+      url = "github:zhaofengli-wip/nix-homebrew";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
 
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
@@ -43,6 +46,11 @@
     homebrew-granted = {
       url = "github:common-fate/homebrew-granted";
       flake = false;
+    };
+
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
