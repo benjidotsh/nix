@@ -34,7 +34,7 @@
         ];
 
         # hot corners
-        wvous-br-corner = null; # bottom-right - disabled
+        wvous-br-corner = 1; # bottom-right - disabled
 
         # icon size
         tilesize = 64;
