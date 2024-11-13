@@ -6,6 +6,7 @@ This is my personal Nix for macOS configuration.
 
 <details>
 <summary>Nix</summary>
+<br>
 <pre>
 $ sh <(curl -L https://nixos.org/nix/install)
 </pre>
@@ -13,6 +14,7 @@ $ sh <(curl -L https://nixos.org/nix/install)
 
 <details>
 <summary>Xcode Command Line Tools</summary>
+<br>
 <pre>
 $ xcode-select --install
 </pre>
@@ -20,6 +22,7 @@ $ xcode-select --install
 
 <details>
 <summary>Rosetta 2</summary>
+<br>
 <pre>
 $ softwareupdate --install-rosetta
 </pre>
