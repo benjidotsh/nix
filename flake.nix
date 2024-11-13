@@ -21,8 +21,6 @@
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
 
-    mac-app-util.url = "github:hraban/mac-app-util";
-
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
@@ -64,7 +62,6 @@
     nixpkgs,
     darwin,
     home-manager,
-    mac-app-util,
     nix-homebrew,
     homebrew-core,
     homebrew-cask,
@@ -99,22 +96,6 @@
           home-manager.extraSpecialArgs = specialArgs;
           home-manager.users.${username} = import ./home;
         }
-
-        mac-app-util.darwinModules.default
-
-        home-manager.darwinModules.home-manager
-        (
-          {
-            pkgs,
-            config,
-            inputs,
-            ...
-          }: {
-            home-manager.sharedModules = [
-              mac-app-util.homeManagerModules.default
-            ];
-          }
-        )
 
         nix-homebrew.darwinModules.nix-homebrew
         {

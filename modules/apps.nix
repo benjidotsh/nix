@@ -33,6 +33,7 @@
       "awscli"
       "folderify"
       "sops"
+      "python-setuptools"
     ];
 
     # `brew install --cask`
@@ -45,6 +46,7 @@
       "httpie"
       "1password"
       "leapp"
+      "steam"
     ];
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
