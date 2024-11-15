@@ -28,13 +28,17 @@
     ];
 
     extraConfig = {
+      init.defaultBranch = "main";
       push.autoSetupRemote = true;
       pull.rebase = true;
+      gpg.format = "ssh";
+      gpg.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
     };
 
-    # signing = {
-    #   signByDefault = true;
-    # };
+    signing = {
+      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINSK4eeyfGaWuK2Arns3PyagHUh9IyyYC/L4ZqC9K085";
+      signByDefault = true;
+    };
 
     delta = {
       enable = true;

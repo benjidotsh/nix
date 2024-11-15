@@ -7,7 +7,6 @@
       dbaeumer.vscode-eslint
       eamodio.gitlens
       jnoortheen.nix-ide
-      mkhl.direnv
 
       # Catppuccin
       catppuccin.catppuccin-vsc
