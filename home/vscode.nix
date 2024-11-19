@@ -7,6 +7,7 @@
       dbaeumer.vscode-eslint
       eamodio.gitlens
       jnoortheen.nix-ide
+      bradlc.vscode-tailwindcss
 
       # Catppuccin
       catppuccin.catppuccin-vsc

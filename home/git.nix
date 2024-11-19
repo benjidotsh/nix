@@ -1,6 +1,6 @@
 {
   lib,
-  username,
+  userfullname,
   useremail,
   ...
 }: {
@@ -16,13 +16,13 @@
     enable = true;
     lfs.enable = true;
 
-    userName = username;
+    userName = userfullname;
     userEmail = useremail;
 
     includes = [
       {
         # use a different config for work
-        path = "~/DPG/.gitconfig";
+        path = "~/DPG/.ssh/.gitconfig";
         condition = "gitdir:~/DPG/";
       }
     ];
@@ -62,6 +62,19 @@
       # aliases for submodule
       update = "submodule update --init --recursive";
       foreach = "submodule foreach";
+    };
+  };
+
+  home.file = {
+    "DPG/.ssh/.gitconfig" = {
+      text = ''
+        [core]
+          sshCommand = ssh -i ~/DPG/.ssh/id_ed25519
+
+        [user]
+          email = benjamin.janssens@persgroep.net
+          signingkey = ~/DPG/.ssh/id_ed25519.pub
+      '';
     };
   };
 }
