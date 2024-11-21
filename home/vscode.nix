@@ -53,6 +53,14 @@
         "editor.defaultFormatter" = "jnoortheen.nix-ide";
         "editor.formatOnSave" = true;
       };
+
+      # GitHub Copilot
+      "github.copilot.enable" = {
+        "*" = true;
+        "plaintext" = false;
+        "markdown" = true;
+        "scminput" = false;
+      };
     };
     mutableExtensionsDir = false;
   };
