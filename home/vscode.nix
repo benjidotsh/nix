@@ -8,6 +8,7 @@
       eamodio.gitlens
       jnoortheen.nix-ide
       bradlc.vscode-tailwindcss
+      expo.vscode-expo-tools
 
       # Catppuccin
       catppuccin.catppuccin-vsc

@@ -50,6 +50,8 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    darwin-custom-icons.url = "github:ryanccn/nix-darwin-custom-icons";
   };
 
   # The `outputs` function will return all the build results of the flake.
@@ -67,6 +69,7 @@
     homebrew-cask,
     homebrew-bundle,
     homebrew-granted,
+    darwin-custom-icons,
     ...
   }: let
     username = "bejanssens";
@@ -88,6 +91,7 @@
         ./modules/system.nix
         ./modules/apps.nix
         ./modules/host-users.nix
+        ./modules/icons
 
         # home manager
         home-manager.darwinModules.home-manager
@@ -121,6 +125,8 @@
             mutableTaps = false;
           };
         }
+
+        darwin-custom-icons.darwinModules.default
       ];
     };
 

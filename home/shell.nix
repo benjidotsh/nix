@@ -16,10 +16,12 @@
     '';
 
     sessionVariables = {
-      PATH = "$PATH:$HOME/go/bin";
+      PATH = "$PATH:$HOME/go/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools";
       NVM_DIR = "$HOME/.nvm";
       AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
       NODE_EXTRA_CA_CERTS = "$HOME/.zcli/zscaler_root.pem";
+      JAVA_HOME = "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home";
+      ANDROID_HOME = "$HOME/Library/Android/sdk";
     };
   };
 }

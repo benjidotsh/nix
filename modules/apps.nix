@@ -24,6 +24,7 @@
       "Messenger" = 1480068668;
       "WhatsApp Messenger" = 310633997;
       "The Unarchiver" = 425424353;
+      "Boop" = 1518425043;
     };
 
     # `brew install`
@@ -34,6 +35,8 @@
       "folderify"
       "sops"
       "python-setuptools"
+      "watchman"
+      "libusb"
     ];
 
     # `brew install --cask`
@@ -48,6 +51,8 @@
       "leapp"
       "steam"
       "monitorcontrol"
+      "zulu@17"
+      "android-studio"
     ];
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
