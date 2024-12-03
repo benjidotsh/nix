@@ -37,6 +37,7 @@
       "python-setuptools"
       "watchman"
       "libusb"
+      "dagger"
     ];
 
     # `brew install --cask`
