@@ -9,6 +9,7 @@
       jnoortheen.nix-ide
       bradlc.vscode-tailwindcss
       expo.vscode-expo-tools
+      platformio.platformio-ide
 
       # Catppuccin
       catppuccin.catppuccin-vsc

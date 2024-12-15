@@ -37,7 +37,6 @@
       "python-setuptools"
       "watchman"
       "libusb"
-      "dagger"
     ];
 
     # `brew install --cask`
@@ -54,6 +53,7 @@
       "monitorcontrol"
       "zulu@17"
       "android-studio"
+      "dbeaver-community"
     ];
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
