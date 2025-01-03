@@ -64,6 +64,6 @@
         "scminput" = false;
       };
     };
-    mutableExtensionsDir = false;
+    mutableExtensionsDir = true;
   };
 }
