@@ -37,6 +37,7 @@
       "python-setuptools"
       "watchman"
       "libusb"
+      "aws-sam-cli"
     ];
 
     # `brew install --cask`
