@@ -1,0 +1,19 @@
+name: update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+      - name: Update packages
+        uses: DeterminateSystems/update-flake-lock@main
+        with:
+          pr-title: "Update packages"
