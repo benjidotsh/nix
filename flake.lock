@@ -154,19 +154,19 @@
         "type": "github"
       }
     },
-    "homebrew-granted": {
+    "homebrew-services": {
       "flake": false,
       "locked": {
-        "lastModified": 1732681883,
-        "narHash": "sha256-d7oUml5AQ2J0dVCmsWXvXLvyEPtC6s+VJGsj7xBvofQ=",
-        "owner": "common-fate",
-        "repo": "homebrew-granted",
-        "rev": "9e400dd95f33ed215c7edf324610f66ff99035d1",
+        "lastModified": 1739176562,
+        "narHash": "sha256-6WG+5gi4SVywh++pQpl5nvG9G9k/kZNn7yLnmIRpcyU=",
+        "owner": "homebrew",
+        "repo": "homebrew-services",
+        "rev": "ec20c0c2e4a221ac376475f02929cb3c8a5eeea0",
         "type": "github"
       },
       "original": {
-        "owner": "common-fate",
-        "repo": "homebrew-granted",
+        "owner": "homebrew",
+        "repo": "homebrew-services",
         "type": "github"
       }
     },
@@ -283,7 +283,7 @@
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
-        "homebrew-granted": "homebrew-granted",
+        "homebrew-services": "homebrew-services",
         "nix-homebrew": "nix-homebrew",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_2",

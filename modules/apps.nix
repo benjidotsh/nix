@@ -38,6 +38,7 @@
       "watchman"
       "libusb"
       "aws-sam-cli"
+      "valkey"
     ];
 
     # `brew install --cask`
