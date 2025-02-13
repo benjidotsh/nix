@@ -10,6 +10,7 @@
       bradlc.vscode-tailwindcss
       expo.vscode-expo-tools
       platformio.platformio-ide
+      prisma.prisma
 
       # Catppuccin
       catppuccin.catppuccin-vsc
@@ -53,7 +54,6 @@
       };
       "[nix]" = {
         "editor.defaultFormatter" = "jnoortheen.nix-ide";
-        "editor.formatOnSave" = true;
       };
 
       # GitHub Copilot
@@ -62,6 +62,11 @@
         "plaintext" = false;
         "markdown" = true;
         "scminput" = false;
+      };
+
+      # Prisma
+      "[prisma]" = {
+        "editor.defaultFormatter" = "prisma.prisma";
       };
     };
     mutableExtensionsDir = true;
