@@ -8,7 +8,6 @@
       eamodio.gitlens
       jnoortheen.nix-ide
       bradlc.vscode-tailwindcss
-      expo.vscode-expo-tools
       platformio.platformio-ide
       prisma.prisma
 
@@ -19,6 +18,10 @@
       # GitHub Copilot
       github.copilot
       github.copilot-chat
+
+      # Expo Tools
+      expo.vscode-expo-tools
+      redhat.vscode-yaml
     ];
     userSettings = {
       # Visual Studio Code
