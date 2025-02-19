@@ -30,7 +30,7 @@
     # `brew install`
     brews = [
       "just"
-      "nvm"
+      "volta"
       "awscli"
       "folderify"
       "sops"
