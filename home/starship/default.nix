@@ -4,7 +4,7 @@
     enableZshIntegration = true;
 
     settings =
-      builtins.fromTOML (builtins.readFile ./nerd-font-symbols.toml)
+      builtins.fromTOML (builtins.readFile ./presets/nerd-font-symbols.toml)
       // {
         docker_context = {
           disabled = true;
