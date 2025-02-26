@@ -31,7 +31,6 @@
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
       pull.rebase = true;
-      format.signOff = true;
 
       gpg = {
         format = "ssh";
