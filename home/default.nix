@@ -5,9 +5,8 @@
     ./core.nix
     ./vscode.nix
     ./git.nix
-    ./starship.nix
+    ./starship
     ./ssh.nix
-    ./go.nix
     ./direnv.nix
   ];
 

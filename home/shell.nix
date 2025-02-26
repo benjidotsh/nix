@@ -6,6 +6,7 @@
     autosuggestion.enable = true;
 
     profileExtra = ''
+      # Homebrew
       eval "$(brew shellenv)"
     '';
   };
