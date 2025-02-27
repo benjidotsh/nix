@@ -24,11 +24,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1740452771,
-        "narHash": "sha256-/tI1vFJ7/dXJqUmI+s0EV1F0DPe6dZvT444mrLUkrlU=",
+        "lastModified": 1740636552,
+        "narHash": "sha256-vBtVB8uU4Bxbyz43MhldAGX91i15j4LJI1Ss3mCCO7s=",
         "owner": "lnl7",
         "repo": "nix-darwin",
-        "rev": "42be12b510253d750138ec90c66decc282298b44",
+        "rev": "665cc04a60eb8ba47d41eadbe6264ca8a71943e8",
         "type": "github"
       },
       "original": {
@@ -93,11 +93,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1740606075,
-        "narHash": "sha256-i3+SOhdroBlXKGT3y6q0pFpqhLI2Iuop8sTp6K+9zlw=",
+        "lastModified": 1740624780,
+        "narHash": "sha256-8TP61AI3QBQsjzVUQFIV8NoB5nbYfJB3iHczhBikDkU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "44b86a72e73a7c3040ac54ed1c5eab5f156929bd",
+        "rev": "b8869e4ead721bbd4f0d6b927e8395705d4f16e6",
         "type": "github"
       },
       "original": {
@@ -109,11 +109,11 @@
     "homebrew-bundle": {
       "flake": false,
       "locked": {
-        "lastModified": 1740558230,
-        "narHash": "sha256-xjjqwFgypSSaDnHmp3sLtiBWXWRQMGIj/jkleJqi5SU=",
+        "lastModified": 1740617752,
+        "narHash": "sha256-oM242nqlYxJRwSKt2IHrCVY7J/fx3+YFEELisGs0nB0=",
         "owner": "homebrew",
         "repo": "homebrew-bundle",
-        "rev": "c3b20f68cd7a8460db46bee413b8e990ffce5db3",
+        "rev": "4e73a05b89c77317f34dc7a1125d70dc1da91a0a",
         "type": "github"
       },
       "original": {
@@ -125,11 +125,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1740601165,
-        "narHash": "sha256-nLxA4kaWAHL1+hccAPpW9N18QNZz3X66rSxMIajG3Pk=",
+        "lastModified": 1740662732,
+        "narHash": "sha256-Tz/w93dCIj5HTxWpl0hkjgNRjLLR4XzKWkbVN723pCo=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "9891c4f0b410377411ef9bb6f4017236dccdddb1",
+        "rev": "0e9cbef10977ac896009600eba51a5547aa04e7b",
         "type": "github"
       },
       "original": {
@@ -141,11 +141,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1740604662,
-        "narHash": "sha256-bwgyNOXyc3hBCAIFHgJsrHgzCLNPjLgFIjWjaXUuiZc=",
+        "lastModified": 1740650860,
+        "narHash": "sha256-SuxIoToqYbGRPl2DmqTp1Zr7USx7mMJPhGPqnmruODo=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "0a4699325b0d8b840d2c2720eb8d588b8fe9ccf2",
+        "rev": "f5e8c5cd0b52d6e1f49a3f215acd894bf048d0c0",
         "type": "github"
       },
       "original": {
@@ -157,11 +157,11 @@
     "homebrew-services": {
       "flake": false,
       "locked": {
-        "lastModified": 1740552554,
-        "narHash": "sha256-KF7bhfhCwIUWTqqAYU30ssB/LXJ6SxmMx8fR6o6U0t0=",
+        "lastModified": 1740648400,
+        "narHash": "sha256-hgBOqK2j7rKXLtWuCY0GcElYX6Lq7+20hgidAAx36tU=",
         "owner": "homebrew",
         "repo": "homebrew-services",
-        "rev": "23c3469c40c933112390b56cf001c31aabb3aef4",
+        "rev": "01e5830581815033ca85f048e099d6f0b85496f8",
         "type": "github"
       },
       "original": {
@@ -219,11 +219,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1740534654,
-        "narHash": "sha256-NYHxfMVMy1ehRTlkinUdAG+iw7mWyWNcSRcRpCgTDVk=",
+        "lastModified": 1740655383,
+        "narHash": "sha256-HHb6wtlHWy/CW3oCtOyOQrNnzgtsvwvwM6wAlDvfTec=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "4283e3e25d5c82e96fe3b575175b33abe66c5031",
+        "rev": "bcf7577daac02aa1a7dfaddc79324b7c6ca4af81",
         "type": "github"
       },
       "original": {
@@ -264,8 +264,8 @@
     "nixpkgs_2": {
       "locked": {
         "lastModified": 0,
-        "narHash": "sha256-vn285HxnnlHLWnv59Og7muqECNMS33mWLM14soFIv2g=",
-        "path": "/nix/store/97hxap05brgklr57xh7qaab6s833rfg0-source",
+        "narHash": "sha256-Ly2fBL1LscV+KyCqPRufUBuiw+zmWrlJzpWOWbahplg=",
+        "path": "/nix/store/64lxq5kn85vglf3xhbh0zxjj8hin3m42-source",
         "type": "path"
       },
       "original": {
