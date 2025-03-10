@@ -42,6 +42,10 @@
       key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINSK4eeyfGaWuK2Arns3PyagHUh9IyyYC/L4ZqC9K085";
       signByDefault = true;
     };
+
+    aliases = {
+      amend = "commit --amend";
+    };
   };
 
   home.file = {
