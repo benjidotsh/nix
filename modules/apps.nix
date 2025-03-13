@@ -25,6 +25,7 @@
       "WhatsApp Messenger" = 310633997;
       "The Unarchiver" = 425424353;
       "Boop" = 1518425043;
+      "Windows App" = 1295203466;
     };
 
     # `brew install`
