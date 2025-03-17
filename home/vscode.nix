@@ -30,6 +30,7 @@
         "workbench.startupEditor" = "none";
         "security.workspace.trust.enabled" = false;
         "editor.fontFamily" = "MesloLGS Nerd Font, Menlo, Monaco, 'Courier New', monospace";
+        "editor.tabSize" = 2;
 
         # Prettier
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
