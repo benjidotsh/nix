@@ -14,6 +14,10 @@
         path = "/Applications/Steam.app";
         icon = ./steam.icns;
       }
+      {
+        path = "/Applications/NoSQL Workbench.app";
+        icon = ./nosql_workbench.icns;
+      }
     ];
   };
 }

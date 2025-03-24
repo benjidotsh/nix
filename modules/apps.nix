@@ -58,6 +58,7 @@
       "android-studio"
       "dbeaver-community"
       "session-manager-plugin"
+      "nosql-workbench"
     ];
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
