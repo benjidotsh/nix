@@ -82,13 +82,6 @@
       // {
         inherit username userfullname useremail hostname;
       };
-
-    # https://github.com/zhaofengli/nix-homebrew/issues/13#issuecomment-2156223912
-    homebrew-services-patched = nixpkgs.legacyPackages."${system}".applyPatches {
-      name = "homebrew-services-patched";
-      src = homebrew-services;
-      patches = [./patches/homebrew-services.patch];
-    };
   in {
     darwinConfigurations."${hostname}" = darwin.lib.darwinSystem {
       inherit system specialArgs;
@@ -124,7 +117,7 @@
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
               "homebrew/homebrew-bundle" = homebrew-bundle;
-              "homebrew/homebrew-services" = homebrew-services-patched;
+              "homebrew/homebrew-services" = homebrew-services;
             };
 
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
