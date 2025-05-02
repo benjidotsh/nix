@@ -24,13 +24,13 @@
         show-recents = false;
 
         persistent-apps = [
-          "/System/Applications/Launchpad.app"
           "/Applications/Firefox.app"
           "/Applications/Spark.app"
           "/Applications/Slack.app"
+          "/Applications/Discord.app"
+          "/Applications/Spotify.app"
           "${pkgs.vscode}/Applications/Visual Studio Code.app"
           "/System/Applications/Utilities/Terminal.app"
-          "/Applications/Spotify.app"
         ];
 
         # hot corners
