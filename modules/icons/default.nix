@@ -18,6 +18,10 @@
         path = "/Applications/NoSQL Workbench.app";
         icon = ./nosql_workbench.icns;
       }
+      {
+        path = "/Users/${username}/DPG";
+        icon = ./dpg_media.icns;
+      }
     ];
   };
 }

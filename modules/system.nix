@@ -1,4 +1,8 @@
-{pkgs, ...}:
+{
+  pkgs,
+  username,
+  ...
+}:
 ###################################################################################
 #
 #  macOS's System configuration
@@ -22,15 +26,22 @@
     defaults = {
       dock = {
         show-recents = false;
+        appswitcher-all-displays = true;
+        minimize-to-application = true;
+        mineffect = "scale";
 
         persistent-apps = [
-          "/Applications/Firefox.app"
-          "/Applications/Spark.app"
-          "/Applications/Slack.app"
-          "/Applications/Discord.app"
-          "/Applications/Spotify.app"
-          "${pkgs.vscode}/Applications/Visual Studio Code.app"
-          "/System/Applications/Utilities/Terminal.app"
+          {app = "/Applications/Firefox.app";}
+          {app = "/Applications/Spark.app";}
+          {app = "/Applications/Slack.app";}
+          {app = "/Applications/Discord.app";}
+          {app = "/Applications/Spotify.app";}
+          {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
+          {app = "/System/Applications/Utilities/Terminal.app";}
+        ];
+
+        persistent-others = [
+          "/Users/${username}/Downloads"
         ];
 
         # hot corners
