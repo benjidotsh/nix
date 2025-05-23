@@ -41,7 +41,7 @@ $ git clone git@github.com:benjidotsh/nix.git
 ```bash
 $ nix build .#darwinConfigurations.BEP6NDVF74Q5.system --extra-experimental-features 'nix-command flakes'
 
-$ ./result/sw/bin/darwin-rebuild switch --flake .#BEP6NDVF74Q5
+$ sudo ./result/sw/bin/darwin-rebuild switch --flake .#BEP6NDVF74Q5
 ```
 
 After deploying the configuration for the first time, you can simply run `just deploy` to apply changes.
