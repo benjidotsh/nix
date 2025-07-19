@@ -3,7 +3,7 @@
   userfullname,
   hostname,
   ...
-} @ args:
+}:
 #############################################################
 #
 #  Host & Users configuration
