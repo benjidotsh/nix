@@ -1,4 +1,8 @@
-{...}: {
+{
+  lib,
+  profile,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -12,18 +16,13 @@
   };
 
   home = {
-    sessionVariables = {
+    sessionVariables = lib.optionalAttrs (profile == "work") {
       VOLTA_HOME = "$HOME/.volta";
       AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
       NODE_EXTRA_CA_CERTS = "$HOME/.zcli/zscaler_root.pem";
-      JAVA_HOME = "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home";
-      ANDROID_HOME = "$HOME/Library/Android/sdk";
     };
 
-    sessionPath = [
-      "$HOME/go/bin"
-      "$ANDROID_HOME/emulator"
-      "$ANDROID_HOME/platform-tools"
+    sessionPath = lib.optionals (profile == "work") [
       "$VOLTA_HOME/bin"
     ];
   };

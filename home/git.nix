@@ -2,6 +2,8 @@
   lib,
   userfullname,
   useremail,
+  signingKey,
+  profile,
   ...
 }: {
   # `programs.git` will generate the config file: ~/.config/git/config
@@ -19,7 +21,7 @@
     userName = userfullname;
     userEmail = useremail;
 
-    includes = [
+    includes = lib.optionals (profile == "work") [
       {
         # use a different config for work
         path = "~/DPG/.ssh/.gitconfig";
@@ -39,7 +41,7 @@
     };
 
     signing = {
-      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINSK4eeyfGaWuK2Arns3PyagHUh9IyyYC/L4ZqC9K085";
+      key = signingKey;
       signByDefault = true;
     };
 
@@ -48,7 +50,7 @@
     };
   };
 
-  home.file = {
+  home.file = lib.optionalAttrs (profile == "work") {
     "DPG/.ssh/.gitconfig" = {
       text = ''
         [core]

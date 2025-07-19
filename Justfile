@@ -1,6 +1,6 @@
 # just is a command runner, justfile is very similar to Makefile, but simpler.
 
-hostname := "BEP6NDVF74Q5"
+hostname := `hostname -s`
 
 # List all the just commands
 default:

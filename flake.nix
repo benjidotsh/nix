@@ -70,65 +70,83 @@
     darwin-custom-icons,
     ...
   }: let
-    username = "bejanssens";
     userfullname = "Benjamin Janssens";
     useremail = "benji.janssens@gmail.com";
-    system = "aarch64-darwin"; # aarch64-darwin or x86_64-darwin
-    hostname = "BEP6NDVF74Q5";
 
-    specialArgs =
-      inputs
-      // {
-        inherit username userfullname useremail hostname;
+    machines = {
+      "BEP6NDVF74Q5" = {
+        profile = "work";
+        system = "aarch64-darwin";
+        username = "bejanssens";
+        signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINSK4eeyfGaWuK2Arns3PyagHUh9IyyYC/L4ZqC9K085";
       };
-  in {
-    darwinConfigurations."${hostname}" = darwin.lib.darwinSystem {
-      inherit system specialArgs;
-      modules = [
-        ./modules/nix-core.nix
-        ./modules/system.nix
-        ./modules/apps.nix
-        ./modules/host-users.nix
-        ./modules/icons
-
-        # home manager
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = specialArgs;
-          home-manager.users.${username} = import ./home;
-        }
-
-        nix-homebrew.darwinModules.nix-homebrew
-        {
-          nix-homebrew = {
-            # Install Homebrew under the default prefix
-            enable = true;
-
-            # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
-            enableRosetta = true;
-
-            # User owning the Homebrew prefix
-            user = username;
-
-            taps = {
-              "homebrew/homebrew-core" = homebrew-core;
-              "homebrew/homebrew-cask" = homebrew-cask;
-              "homebrew/homebrew-bundle" = homebrew-bundle;
-              "homebrew/homebrew-services" = homebrew-services;
-            };
-
-            # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
-            mutableTaps = false;
-          };
-        }
-
-        darwin-custom-icons.darwinModules.default
-      ];
     };
 
+    mkSpecialArgs = hostname: machine:
+      inputs
+      // {
+        inherit userfullname useremail hostname;
+        inherit (machine) username signingKey;
+        profile = machine.profile;
+      };
+  in {
+    darwinConfigurations =
+      builtins.mapAttrs (
+        hostname: machine:
+          darwin.lib.darwinSystem {
+            inherit (machine) system;
+            specialArgs = mkSpecialArgs hostname machine;
+            modules = [
+              ./modules/nix-core.nix
+              ./modules/system.nix
+              ./modules/apps.nix
+              ./modules/host-users.nix
+              ./modules/icons
+
+              # home manager
+              home-manager.darwinModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.extraSpecialArgs = mkSpecialArgs hostname machine;
+                home-manager.users.${machine.username} = import ./home;
+              }
+
+              nix-homebrew.darwinModules.nix-homebrew
+              {
+                nix-homebrew = {
+                  # Install Homebrew under the default prefix
+                  enable = true;
+
+                  # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+                  enableRosetta = true;
+
+                  # User owning the Homebrew prefix
+                  user = machine.username;
+
+                  taps = {
+                    "homebrew/homebrew-core" = homebrew-core;
+                    "homebrew/homebrew-cask" = homebrew-cask;
+                    "homebrew/homebrew-bundle" = homebrew-bundle;
+                    "homebrew/homebrew-services" = homebrew-services;
+                  };
+
+                  # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
+                  mutableTaps = false;
+                };
+              }
+
+              darwin-custom-icons.darwinModules.default
+            ];
+          }
+      )
+      machines;
+
     # nix code formatter
-    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
+    formatter =
+      builtins.mapAttrs (
+        _: machine: nixpkgs.legacyPackages.${machine.system}.alejandra
+      )
+      machines;
   };
 }

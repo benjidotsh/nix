@@ -1,4 +1,9 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  profile,
+  ...
+}: {
   environment.variables.EDITOR = "code --wait";
 
   # The apps installed by homebrew are not managed by nix, and not reproducible!
@@ -17,50 +22,55 @@
     # You need to install all these Apps manually first so that your apple account have records for them.
     # otherwise Apple Store will refuse to install them.
     # For details, see https://github.com/mas-cli/mas
-    masApps = {
-      "Xcode" = 497799835;
-      "Spark Classic" = 1176895641;
-      "Slack" = 803453959;
-      "Messenger" = 1480068668;
-      "WhatsApp Messenger" = 310633997;
-      "The Unarchiver" = 425424353;
-      "Boop" = 1518425043;
-      "Windows App" = 1295203466;
-    };
+    masApps =
+      {
+        "The Unarchiver" = 425424353;
+        "Boop" = 1518425043;
+        "Spark Classic" = 1176895641;
+        "Messenger" = 1480068668;
+        "WhatsApp Messenger" = 310633997;
+      }
+      // (lib.optionalAttrs (profile == "work") {
+        "Slack" = 803453959;
+      });
 
     # `brew install`
-    brews = [
-      "just"
-      "volta"
-      "awscli"
-      "folderify"
-      "sops"
-      "python-setuptools"
-      "watchman"
-      "libusb"
-      "aws-sam-cli"
-      "valkey"
-    ];
+    brews =
+      [
+        "just"
+        "folderify"
+      ]
+      ++ (lib.optionals (profile == "work") [
+        "awscli"
+        "sops"
+        "aws-sam-cli"
+        "valkey"
+        "volta"
+      ]);
 
     # `brew install --cask`
-    casks = [
-      "firefox"
-      "discord"
-      "spotify"
-      "orbstack"
-      "postgres-unofficial"
-      "httpie-desktop"
-      "1password"
-      "leapp"
-      "steam"
-      "monitorcontrol"
-      "zulu@17"
-      "android-studio"
-      "dbeaver-community"
-      "session-manager-plugin"
-      "nosql-workbench"
-      "bambu-studio"
-    ];
+    casks =
+      [
+        "firefox"
+        "discord"
+        "spotify"
+        "1password"
+        "monitorcontrol"
+      ]
+      ++ (lib.optionals (profile == "personal") [
+        "steam"
+        "bambu-studio"
+        "autodesk-fusion"
+      ])
+      ++ (lib.optionals (profile == "work") [
+        "orbstack"
+        "postgres-unofficial"
+        "httpie-desktop"
+        "leapp"
+        "dbeaver-community"
+        "session-manager-plugin"
+        "nosql-workbench"
+      ]);
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
     taps = builtins.attrNames config.nix-homebrew.taps;

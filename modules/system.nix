@@ -1,6 +1,7 @@
 {
   pkgs,
   username,
+  profile,
   ...
 }:
 ###################################################################################
@@ -31,15 +32,25 @@
         minimize-to-application = true;
         mineffect = "scale";
 
-        persistent-apps = [
-          {app = "/Applications/Firefox.app";}
-          {app = "/Applications/Spark.app";}
-          {app = "/Applications/Slack.app";}
-          {app = "/Applications/Discord.app";}
-          {app = "/Applications/Spotify.app";}
-          {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
-          {app = "/System/Applications/Utilities/Terminal.app";}
-        ];
+        persistent-apps =
+          if profile == "personal"
+          then [
+            {app = "/Applications/Firefox.app";}
+            {app = "/Applications/Spark.app";}
+            {app = "/Applications/Discord.app";}
+            {app = "/Applications/Spotify.app";}
+            {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
+            {app = "/System/Applications/Utilities/Terminal.app";}
+          ]
+          else [
+            {app = "/Applications/Firefox.app";}
+            {app = "/Applications/Spark.app";}
+            {app = "/Applications/Slack.app";}
+            {app = "/Applications/Discord.app";}
+            {app = "/Applications/Spotify.app";}
+            {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
+            {app = "/System/Applications/Utilities/Terminal.app";}
+          ];
 
         persistent-others = [
           "/Users/${username}/Downloads"
