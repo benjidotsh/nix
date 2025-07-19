@@ -49,7 +49,7 @@
       "spotify"
       "orbstack"
       "postgres-unofficial"
-      "httpie"
+      "httpie-desktop"
       "1password"
       "leapp"
       "steam"
@@ -59,6 +59,7 @@
       "dbeaver-community"
       "session-manager-plugin"
       "nosql-workbench"
+      "bambu-studio"
     ];
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
