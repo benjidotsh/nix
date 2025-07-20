@@ -11,6 +11,7 @@
         jnoortheen.nix-ide
         bradlc.vscode-tailwindcss
         platformio.platformio-ide
+        prisma.prisma
 
         # Catppuccin
         catppuccin.catppuccin-vsc
