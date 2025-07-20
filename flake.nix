@@ -74,6 +74,12 @@
     useremail = "benji.janssens@gmail.com";
 
     machines = {
+      "MacBook-Pro-van-benji" = {
+        profile = "personal";
+        system = "aarch64-darwin";
+        username = "benji";
+        signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBnojuJBXUyYrOi7N0+6eThaUpQxHbjqWeAOiIIwjsx7";
+      };
       "BEP6NDVF74Q5" = {
         profile = "work";
         system = "aarch64-darwin";
