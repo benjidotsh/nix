@@ -88,6 +88,9 @@
         #   askForPassword = 1;
         #   askForPasswordDelay = 0;
         # };
+        "com.apple.dock" = {
+          showAppExposeGestureEnabled = 1;
+        };
       };
 
       menuExtraClock = {
