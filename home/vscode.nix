@@ -66,6 +66,7 @@
           "markdown" = true;
           "scminput" = false;
         };
+        "github.copilot.nextEditSuggestions.enabled" = true;
 
         # Prisma
         "[prisma]" = {

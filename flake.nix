@@ -84,6 +84,11 @@
         system = "aarch64-darwin";
         username = "bejanssens";
       };
+      "test" = {
+        profile = "test";
+        system = "aarch64-darwin";
+        username = "test";
+      };
     };
 
     mkSpecialArgs = hostname: machine:

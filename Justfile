@@ -78,3 +78,7 @@ fmt:
 gcroot:
   ls -al /nix/var/nix/gcroots/auto/
 
+
+[group('nix')]
+test:
+  nix build .#darwinConfigurations.test.config.system.build.toplevel
