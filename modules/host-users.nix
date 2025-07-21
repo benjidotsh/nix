@@ -19,6 +19,7 @@
     home = "/Users/${username}";
     description = userfullname;
   };
+  system.primaryUser = username;
 
   nix.settings.trusted-users = [username];
 }

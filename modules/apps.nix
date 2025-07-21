@@ -2,6 +2,7 @@
   config,
   lib,
   profile,
+  nix-vscode-extensions,
   ...
 }: {
   environment.variables.EDITOR = "code --wait";
@@ -74,5 +75,14 @@
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
     taps = builtins.attrNames config.nix-homebrew.taps;
+  };
+
+  nixpkgs = {
+    # Allow unfree packages
+    config.allowUnfree = true;
+
+    overlays = [
+      nix-vscode-extensions.overlays.default
+    ];
   };
 }

@@ -78,13 +78,11 @@
         profile = "personal";
         system = "aarch64-darwin";
         username = "benji";
-        signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBnojuJBXUyYrOi7N0+6eThaUpQxHbjqWeAOiIIwjsx7";
       };
       "BEP6NDVF74Q5" = {
         profile = "work";
         system = "aarch64-darwin";
         username = "bejanssens";
-        signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINSK4eeyfGaWuK2Arns3PyagHUh9IyyYC/L4ZqC9K085";
       };
     };
 
@@ -92,7 +90,7 @@
       inputs
       // {
         inherit userfullname useremail hostname;
-        inherit (machine) username signingKey;
+        inherit (machine) username;
         profile = machine.profile;
       };
   in {
