@@ -16,14 +16,15 @@
   };
 
   home = {
-    sessionVariables = lib.optionalAttrs (profile == "work") {
-      VOLTA_HOME = "$HOME/.volta";
-      AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
-      NODE_EXTRA_CA_CERTS = "$HOME/.zcli/zscaler_root.pem";
-    };
+    sessionVariables =
+      {
+        VOLTA_HOME = "$HOME/.volta";
+      }
+      // (lib.optionalAttrs (profile == "work") {
+        AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
+        NODE_EXTRA_CA_CERTS = "$HOME/.zcli/zscaler_root.pem";
+      });
 
-    sessionPath = lib.optionals (profile == "work") [
-      "$VOLTA_HOME/bin"
-    ];
+    sessionPath = ["$VOLTA_HOME/bin"];
   };
 }

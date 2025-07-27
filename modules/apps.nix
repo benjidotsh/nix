@@ -40,13 +40,13 @@
       [
         "just"
         "folderify"
+        "volta"
       ]
       ++ (lib.optionals (profile == "work") [
         "awscli"
         "sops"
         "aws-sam-cli"
         "valkey"
-        "volta"
       ]);
 
     # `brew install --cask`
