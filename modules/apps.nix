@@ -57,6 +57,7 @@
         "spotify"
         "1password"
         "monitorcontrol"
+        "orbstack"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
@@ -64,7 +65,6 @@
         "autodesk-fusion"
       ])
       ++ (lib.optionals (profile == "work") [
-        "orbstack"
         "postgres-unofficial"
         "httpie-desktop"
         "leapp"
