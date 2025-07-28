@@ -67,6 +67,8 @@
           "scminput" = false;
         };
         "github.copilot.nextEditSuggestions.enabled" = true;
+        "chat.tools.autoApprove" = true;
+        "chat.agent.maxRequests" = 100;
 
         # Prisma
         "[prisma]" = {
