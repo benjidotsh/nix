@@ -1,80 +1,91 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  profile,
+  ...
+}: {
   programs.vscode = {
     enable = true;
 
     profiles.default = {
       extensions = with pkgs.vscode-marketplace;
-      with pkgs.vscode-marketplace-release; [
-        esbenp.prettier-vscode
-        dbaeumer.vscode-eslint
-        eamodio.gitlens
-        jnoortheen.nix-ide
-        bradlc.vscode-tailwindcss
-        platformio.platformio-ide
-        prisma.prisma
+      with pkgs.vscode-marketplace-release;
+        [
+          esbenp.prettier-vscode
+          dbaeumer.vscode-eslint
+          eamodio.gitlens
+          jnoortheen.nix-ide
 
-        # Catppuccin
-        catppuccin.catppuccin-vsc
-        catppuccin.catppuccin-vsc-icons
+          # Catppuccin
+          catppuccin.catppuccin-vsc
+          catppuccin.catppuccin-vsc-icons
 
-        # GitHub Copilot
-        github.copilot
-        github.copilot-chat
-      ];
-      userSettings = {
-        # Visual Studio Code
-        "workbench.startupEditor" = "none";
-        "security.workspace.trust.enabled" = false;
-        "editor.fontFamily" = "MesloLGS Nerd Font, Menlo, Monaco, 'Courier New', monospace";
-        "editor.tabSize" = 2;
+          # GitHub Copilot
+          github.copilot
+          github.copilot-chat
+        ]
+        ++ (lib.optionals (profile == "personal") [
+          bradlc.vscode-tailwindcss
+          platformio.platformio-ide
+          prisma.prisma
+          antyos.openscad
+        ]);
+      userSettings =
+        {
+          # Visual Studio Code
+          "workbench.startupEditor" = "none";
+          "security.workspace.trust.enabled" = false;
+          "editor.fontFamily" = "MesloLGS Nerd Font, Menlo, Monaco, 'Courier New', monospace";
+          "editor.tabSize" = 2;
 
-        # Prettier
-        "editor.defaultFormatter" = "esbenp.prettier-vscode";
-        "editor.formatOnSave" = true;
-        "prettier.requireConfig" = true;
+          # Prettier
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "editor.formatOnSave" = true;
+          "prettier.requireConfig" = true;
 
-        # ESLint
-        "editor.codeActionsOnSave" = {
-          "source.fixAll" = "explicit";
-        };
+          # ESLint
+          "editor.codeActionsOnSave" = {
+            "source.fixAll" = "explicit";
+          };
 
-        # GitLens
-        "gitlens.codeLens.enabled" = false;
+          # GitLens
+          "gitlens.codeLens.enabled" = false;
 
-        # Catppuccin
-        "workbench.colorTheme" = "Catppuccin Macchiato";
-        "workbench.iconTheme" = "catppuccin-macchiato";
+          # Catppuccin
+          "workbench.colorTheme" = "Catppuccin Macchiato";
+          "workbench.iconTheme" = "catppuccin-macchiato";
 
-        # Nix
-        "nix.enableLanguageServer" = true;
-        "nix.serverPath" = "nixd";
-        "nix.serverSettings" = {
-          "nixd" = {
-            "formatting" = {
-              "command" = ["alejandra"];
+          # Nix
+          "nix.enableLanguageServer" = true;
+          "nix.serverPath" = "nixd";
+          "nix.serverSettings" = {
+            "nixd" = {
+              "formatting" = {
+                "command" = ["alejandra"];
+              };
             };
           };
-        };
-        "[nix]" = {
-          "editor.defaultFormatter" = "jnoortheen.nix-ide";
-        };
+          "[nix]" = {
+            "editor.defaultFormatter" = "jnoortheen.nix-ide";
+          };
 
-        # GitHub Copilot
-        "github.copilot.enable" = {
-          "*" = true;
-          "plaintext" = false;
-          "markdown" = true;
-          "scminput" = false;
-        };
-        "github.copilot.nextEditSuggestions.enabled" = true;
-        "chat.tools.autoApprove" = true;
-        "chat.agent.maxRequests" = 100;
-
-        # Prisma
-        "[prisma]" = {
-          "editor.defaultFormatter" = "prisma.prisma";
-        };
-      };
+          # GitHub Copilot
+          "github.copilot.enable" = {
+            "*" = true;
+            "plaintext" = false;
+            "markdown" = true;
+            "scminput" = false;
+          };
+          "github.copilot.nextEditSuggestions.enabled" = true;
+          "chat.tools.autoApprove" = true;
+          "chat.agent.maxRequests" = 100;
+        }
+        // (lib.optionalAttrs (profile == "personal") {
+          # Prisma
+          "[prisma]" = {
+            "editor.defaultFormatter" = "prisma.prisma";
+          };
+        });
     };
 
     mutableExtensionsDir = true;

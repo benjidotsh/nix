@@ -63,6 +63,7 @@
         "steam"
         "bambu-studio"
         "autodesk-fusion"
+        "openscad"
       ])
       ++ (lib.optionals (profile == "work") [
         "postgres-unofficial"
