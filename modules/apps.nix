@@ -64,6 +64,8 @@
         "bambu-studio"
         "autodesk-fusion"
         "openscad@snapshot"
+        "adobe-acrobat-reader"
+        "beid-token"
       ])
       ++ (lib.optionals (profile == "work") [
         "postgres-unofficial"
