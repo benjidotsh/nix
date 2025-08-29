@@ -154,6 +154,22 @@
         "type": "github"
       }
     },
+    "homebrew-sst": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1756239803,
+        "narHash": "sha256-GDmqs9NEBLoSOiaPMDrteODsKO/sgkgKkfC+kfCJn4s=",
+        "owner": "sst",
+        "repo": "homebrew-tap",
+        "rev": "5ab1ba1c9d13c714b36ecf958012c0581b76dd4e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sst",
+        "repo": "homebrew-tap",
+        "type": "github"
+      }
+    },
     "nix-homebrew": {
       "inputs": {
         "brew-src": "brew-src"
@@ -232,6 +248,7 @@
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
         "homebrew-services": "homebrew-services",
+        "homebrew-sst": "homebrew-sst",
         "nix-homebrew": "nix-homebrew",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs",

@@ -44,6 +44,11 @@
       flake = false;
     };
 
+    homebrew-sst = {
+      url = "github:sst/homebrew-tap";
+      flake = false;
+    };
+
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -67,6 +72,7 @@
     homebrew-cask,
     homebrew-bundle,
     homebrew-services,
+    homebrew-sst,
     darwin-custom-icons,
     ...
   }: let
@@ -138,6 +144,7 @@
                     "homebrew/homebrew-cask" = homebrew-cask;
                     "homebrew/homebrew-bundle" = homebrew-bundle;
                     "homebrew/homebrew-services" = homebrew-services;
+                    "sst/homebrew-sst" = homebrew-sst;
                   };
 
                   # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.

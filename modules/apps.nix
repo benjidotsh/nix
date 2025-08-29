@@ -41,6 +41,7 @@
         "just"
         "folderify"
         "volta"
+        "opencode"
       ]
       ++ (lib.optionals (profile == "work") [
         "awscli"
