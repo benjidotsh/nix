@@ -58,7 +58,6 @@
         "spotify"
         "1password"
         "monitorcontrol"
-        "orbstack"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
@@ -67,6 +66,7 @@
         "openscad@snapshot"
         "adobe-acrobat-reader"
         "beid-token"
+        "orbstack"
       ])
       ++ (lib.optionals (profile == "work") [
         "postgres-unofficial"
@@ -75,6 +75,7 @@
         "dbeaver-community"
         "session-manager-plugin"
         "nosql-workbench"
+        "docker-desktop"
       ]);
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
