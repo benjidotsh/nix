@@ -7,13 +7,7 @@
   environment.customIcons = {
     enable = true;
     icons =
-      [
-        {
-          path = "/Applications/Spotify.app";
-          icon = ./spotify.icns;
-        }
-      ]
-      ++ (lib.optionals (profile == "personal") [
+      (lib.optionals (profile == "personal") [
         {
           path = "/Applications/Steam.app";
           icon = ./steam.icns;

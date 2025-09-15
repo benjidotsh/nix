@@ -28,7 +28,7 @@
         persistent-apps =
           if profile == "personal"
           then [
-            {app = "/System/Applications/Launchpad.app";}
+            {app = "/System/Applications/Apps.app";}
             {app = "/Applications/Firefox.app";}
             {app = "/Applications/Spark.app";}
             {app = "/Applications/Discord.app";}
@@ -37,7 +37,7 @@
             {app = "/System/Applications/Utilities/Terminal.app";}
           ]
           else [
-            {app = "/System/Applications/Launchpad.app";}
+            {app = "/System/Applications/Apps.app";}
             {app = "/Applications/Firefox.app";}
             {app = "/Applications/Spark.app";}
             {app = "/Applications/Slack.app";}
