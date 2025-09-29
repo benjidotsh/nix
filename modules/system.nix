@@ -29,7 +29,7 @@
           if profile == "personal"
           then [
             {app = "/System/Applications/Apps.app";}
-            {app = "/Applications/Firefox.app";}
+            {app = "/System/Cryptexes/App/System/Applications/Safari.app";}
             {app = "/Applications/Spark.app";}
             {app = "/Applications/Discord.app";}
             {app = "/Applications/Spotify.app";}
@@ -38,7 +38,7 @@
           ]
           else [
             {app = "/System/Applications/Apps.app";}
-            {app = "/Applications/Firefox.app";}
+            {app = "/System/Cryptexes/App/System/Applications/Safari.app";}
             {app = "/Applications/Spark.app";}
             {app = "/Applications/Slack.app";}
             {app = "/Applications/Discord.app";}

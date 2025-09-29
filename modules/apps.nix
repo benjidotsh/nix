@@ -30,6 +30,8 @@
         "Spark Classic" = 1176895641;
         "Messenger" = 1480068668;
         "WhatsApp Messenger" = 310633997;
+        "1Password for Safari" = 1569813296;
+        "TestFlight" = 899247664;
       }
       // (lib.optionalAttrs (profile == "work") {
         "Slack" = 803453959;
@@ -53,7 +55,6 @@
     # `brew install --cask`
     casks =
       [
-        "firefox"
         "discord"
         "spotify"
         "1password"
