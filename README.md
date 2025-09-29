@@ -28,7 +28,7 @@ $ softwareupdate --install-rosetta
 </pre>
 </details>
 
-## Get started
+## Getting started
 
 ### 1. Clone this repository
 
@@ -47,3 +47,19 @@ $ sudo ./result/sw/bin/darwin-rebuild switch --flake .#$(hostname -s)
 After deploying the configuration for the first time, you can simply run `just deploy` to apply changes.
 
 To view all available commands, run `just`.
+
+## Additional configuration
+
+The following configuration can't be managed by Nix and needs to be configured manually:
+
+- **Enable the 1Password SSH agent**
+  1. Open 1Password → Settings → Developer.
+  2. Enable “Use the SSH agent”.
+
+- **Apply the custom Terminal theme**
+  1. Open Terminal → Settings → Profiles.
+  2. Import the [custom theme](./misc/benji.terminal) and set it as default.
+
+- **Disable Terminal prompt line markers**
+  1. Navigate to Terminal → Edit → Marks.
+  2. Disable “Automatically Mark Prompt Lines".

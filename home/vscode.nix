@@ -35,8 +35,9 @@
           # Visual Studio Code
           "workbench.startupEditor" = "none";
           "security.workspace.trust.enabled" = false;
-          "editor.fontFamily" = "MesloLGS Nerd Font, Menlo, Monaco, 'Courier New', monospace";
+          "editor.fontFamily" = "Fira Code, Monaco, 'Courier New', monospace";
           "editor.tabSize" = 2;
+          "editor.fontLigatures" = true;
 
           # Prettier
           "editor.defaultFormatter" = "esbenp.prettier-vscode";
