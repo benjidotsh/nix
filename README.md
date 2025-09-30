@@ -58,7 +58,7 @@ The following configuration can't be managed by Nix and needs to be configured m
 
 - **Apply the custom Terminal theme**
   1. Open Terminal → Settings → Profiles.
-  2. Import the [custom theme](./misc/benji.terminal) and set it as default.
+  2. Import [catppuccin-macchiato.terminal](./misc/catppuccin-macchiato.terminal) and set it as default.
 
 - **Disable Terminal prompt line markers**
   1. Navigate to Terminal → Edit → Marks.
