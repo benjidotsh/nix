@@ -93,16 +93,16 @@
     "homebrew-bun": {
       "flake": false,
       "locked": {
-        "lastModified": 1759666079,
-        "narHash": "sha256-iFpBdkRJxMZM1ymJYrLHljtLvijljdC/yG+nTsjPgNI=",
+        "lastModified": 1759069578,
+        "narHash": "sha256-FjmYU7lxzeJGKiJHZrnyoH6uo3eZwTlHN5QjQ48Qy9s=",
         "owner": "oven-sh",
-        "repo": "bun",
-        "rev": "67647c35220c56df1449e4a310d9b7e1ba071aed",
+        "repo": "homebrew-bun",
+        "rev": "961c88d5837dad17d6e5b5e7fecd38eff618cf47",
         "type": "github"
       },
       "original": {
         "owner": "oven-sh",
-        "repo": "bun",
+        "repo": "homebrew-bun",
         "type": "github"
       }
     },

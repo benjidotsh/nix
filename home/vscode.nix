@@ -80,6 +80,10 @@
           "github.copilot.nextEditSuggestions.enabled" = true;
           "chat.tools.autoApprove" = true;
           "chat.agent.maxRequests" = 100;
+
+          # JavaScript/TypeScript
+          "typescript.preferences.importModuleSpecifier" = "non-relative";
+          "javascript.preferences.importModuleSpecifier" = "non-relative";
         }
         // (lib.optionalAttrs (profile == "personal") {
           # Prisma

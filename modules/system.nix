@@ -22,8 +22,8 @@
       dock = {
         show-recents = false;
         appswitcher-all-displays = true;
-        minimize-to-application = true;
-        mineffect = "scale";
+        minimize-to-application = false;
+        mineffect = "genie";
 
         persistent-apps =
           if profile == "personal"
