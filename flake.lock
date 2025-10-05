@@ -90,6 +90,22 @@
         "type": "github"
       }
     },
+    "homebrew-bun": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1759666079,
+        "narHash": "sha256-iFpBdkRJxMZM1ymJYrLHljtLvijljdC/yG+nTsjPgNI=",
+        "owner": "oven-sh",
+        "repo": "bun",
+        "rev": "67647c35220c56df1449e4a310d9b7e1ba071aed",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oven-sh",
+        "repo": "bun",
+        "type": "github"
+      }
+    },
     "homebrew-bundle": {
       "flake": false,
       "locked": {
@@ -244,6 +260,7 @@
         "darwin": "darwin",
         "darwin-custom-icons": "darwin-custom-icons",
         "home-manager": "home-manager",
+        "homebrew-bun": "homebrew-bun",
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",

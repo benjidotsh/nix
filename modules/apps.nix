@@ -45,6 +45,9 @@
         "volta"
         "opencode"
       ]
+      ++ (lib.optionals (profile == "personal") [
+        "bun"
+      ])
       ++ (lib.optionals (profile == "work") [
         "awscli"
         "sops"
