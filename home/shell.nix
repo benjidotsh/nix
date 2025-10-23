@@ -26,5 +26,9 @@
       });
 
     sessionPath = ["$VOLTA_HOME/bin"];
+
+    shellAliases = {
+      update = "(cd ~/nix; git pull; just deploy)";
+    };
   };
 }

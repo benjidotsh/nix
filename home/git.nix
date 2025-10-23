@@ -17,8 +17,25 @@
     enable = true;
     lfs.enable = true;
 
-    userName = userfullname;
-    userEmail = useremail;
+    settings = {
+      user = {
+        name = userfullname;
+        email = useremail;
+      };
+
+      init.defaultBranch = "main";
+      push.autoSetupRemote = true;
+      pull.rebase = true;
+
+      gpg = {
+        format = "ssh";
+        ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+      };
+
+      alias = {
+        amend = "commit --amend";
+      };
+    };
 
     includes = lib.optionals (profile == "work") [
       {
@@ -28,24 +45,9 @@
       }
     ];
 
-    extraConfig = {
-      init.defaultBranch = "main";
-      push.autoSetupRemote = true;
-      pull.rebase = true;
-
-      gpg = {
-        format = "ssh";
-        ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
-      };
-    };
-
     signing = {
       key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINSK4eeyfGaWuK2Arns3PyagHUh9IyyYC/L4ZqC9K085";
       signByDefault = true;
-    };
-
-    aliases = {
-      amend = "commit --amend";
     };
   };
 
