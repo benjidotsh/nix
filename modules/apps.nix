@@ -41,6 +41,7 @@
     brews =
       [
         "just"
+        "mas"
         "folderify"
         "volta"
       ]
@@ -52,6 +53,7 @@
         "sops"
         "aws-sam-cli"
         "valkey"
+        "specify"
       ]);
 
     # `brew install --cask`
@@ -81,7 +83,6 @@
         "docker-desktop"
         "claude-code"
         "codex"
-        "specify"
       ]);
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
