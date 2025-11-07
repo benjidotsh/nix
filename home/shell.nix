@@ -9,9 +9,19 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
 
+    initContent = lib.optionalString (profile == "work") ''
+      fix-compinit() {
+        for file in $(compaudit); do
+          sudo chmod 755 $file
+          sudo chmod 755 $(dirname $file)
+          sudo chown $(whoami) $file
+        done
+      }
+    '';
+
     profileExtra = ''
       # Homebrew
-      eval "$(brew shellenv)"
+      eval "$(brew shellenv zsh)"
     '';
   };
 
@@ -23,6 +33,7 @@
       // (lib.optionalAttrs (profile == "work") {
         AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
         NODE_EXTRA_CA_CERTS = "$HOME/.zcli/zscaler_root.pem";
+        DISABLE_AUTOUPDATER = "1"; # recommended for Claude Code
       });
 
     sessionPath = ["$VOLTA_HOME/bin"];

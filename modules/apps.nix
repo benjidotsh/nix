@@ -43,7 +43,6 @@
         "just"
         "folderify"
         "volta"
-        "opencode"
       ]
       ++ (lib.optionals (profile == "personal") [
         "bun"
@@ -80,6 +79,9 @@
         "session-manager-plugin"
         "nosql-workbench"
         "docker-desktop"
+        "claude-code"
+        "codex"
+        "specify"
       ]);
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641

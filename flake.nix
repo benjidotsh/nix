@@ -44,11 +44,6 @@
       flake = false;
     };
 
-    homebrew-sst = {
-      url = "github:sst/homebrew-tap";
-      flake = false;
-    };
-
     homebrew-bun = {
       url = "github:oven-sh/homebrew-bun";
       flake = false;
@@ -77,7 +72,6 @@
     homebrew-cask,
     homebrew-bundle,
     homebrew-services,
-    homebrew-sst,
     homebrew-bun,
     darwin-custom-icons,
     ...
@@ -150,7 +144,6 @@
                     "homebrew/homebrew-cask" = homebrew-cask;
                     "homebrew/homebrew-bundle" = homebrew-bundle;
                     "homebrew/homebrew-services" = homebrew-services;
-                    "sst/homebrew-sst" = homebrew-sst;
                     "oven-sh/homebrew-bun" = homebrew-bun;
                   };
 
