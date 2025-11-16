@@ -33,6 +33,9 @@
         "1Password for Safari" = 1569813296;
         "TestFlight" = 899247664;
       }
+      // (lib.optionalAttrs (profile == "personal") {
+        "Xcode" = 497799835;
+      })
       // (lib.optionalAttrs (profile == "work") {
         "Slack" = 803453959;
       });
@@ -47,6 +50,7 @@
       ]
       ++ (lib.optionals (profile == "personal") [
         "bun"
+        "watchman"
       ])
       ++ (lib.optionals (profile == "work") [
         "awscli"
