@@ -51,6 +51,7 @@
       ++ (lib.optionals (profile == "personal") [
         "bun"
         "watchman"
+        "cocoapods"
       ])
       ++ (lib.optionals (profile == "work") [
         "awscli"
