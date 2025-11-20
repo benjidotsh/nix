@@ -13,7 +13,7 @@
         [
           esbenp.prettier-vscode
           dbaeumer.vscode-eslint
-          eamodio.gitlens
+          # eamodio.gitlens
           jnoortheen.nix-ide
 
           # Catppuccin
@@ -50,7 +50,7 @@
           };
 
           # GitLens
-          "gitlens.codeLens.enabled" = false;
+          # "gitlens.codeLens.enabled" = false;
 
           # Catppuccin
           "workbench.colorTheme" = "Catppuccin Macchiato";
