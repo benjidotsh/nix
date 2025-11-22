@@ -68,6 +68,7 @@
         "spotify"
         "1password"
         "monitorcontrol"
+        "claude-code"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
@@ -86,7 +87,6 @@
         "session-manager-plugin"
         "nosql-workbench"
         "docker-desktop"
-        "claude-code"
         "codex"
         "kiro"
       ]);
