@@ -55,6 +55,8 @@
     };
 
     darwin-custom-icons.url = "github:ryanccn/nix-darwin-custom-icons";
+
+    opnix.url = "github:brizzbuzz/opnix";
   };
 
   # The `outputs` function will return all the build results of the flake.
@@ -74,6 +76,7 @@
     homebrew-services,
     homebrew-bun,
     darwin-custom-icons,
+    opnix,
     ...
   }: let
     userfullname = "Benjamin Janssens";
@@ -124,6 +127,7 @@
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.extraSpecialArgs = mkSpecialArgs hostname machine;
+                home-manager.sharedModules = [opnix.homeManagerModules.default];
                 home-manager.users.${machine.username} = import ./home;
               }
 

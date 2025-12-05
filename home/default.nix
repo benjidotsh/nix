@@ -13,6 +13,8 @@
       ./git.nix
       ./starship
       ./ssh.nix
+      ./opnix.nix
+      ./claude-code.nix
     ]
     ++ (lib.optionals (profile == "work") [
       ./direnv.nix

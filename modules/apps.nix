@@ -68,7 +68,6 @@
         "spotify"
         "1password"
         "monitorcontrol"
-        "claude-code"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"

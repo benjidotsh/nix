@@ -48,6 +48,18 @@ After deploying the configuration for the first time, you can simply run `just d
 
 To view all available commands, run `just`.
 
+### 3. Configure 1Password for secrets management
+
+```bash
+$ opnix token -path ~/.config/opnix/token set
+```
+
+### 4. Redeploy the configuration
+
+```bash
+$ just deploy
+```
+
 ## Additional configuration
 
 The following configuration can't be managed by Nix and needs to be configured manually:

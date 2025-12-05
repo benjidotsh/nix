@@ -15,6 +15,7 @@
           dbaeumer.vscode-eslint
           eamodio.gitlens
           jnoortheen.nix-ide
+          anthropic.claude-code
 
           # Catppuccin
           catppuccin.catppuccin-vsc
