@@ -7,6 +7,14 @@
         command = "npx";
         args = ["-y" "@upstash/context7-mcp"];
       };
+
+      github = {
+        type = "http";
+        url = "https://api.githubcopilot.com/mcp";
+        headers = {
+          Authorization = "Bearer \${GITHUB_PAT}";
+        };
+      };
     };
 
     memory.text = ''

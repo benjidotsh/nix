@@ -5,8 +5,14 @@
 
     secrets = {
       context7 = {
-        reference = "op://Nix/Context7/referentie";
+        reference = "op://Nix/Secrets/Context7";
         path = ".config/opnix/context7";
+        mode = "0600";
+      };
+
+      github = {
+        reference = "op://Nix/Secrets/GitHub";
+        path = ".config/opnix/github";
         mode = "0600";
       };
     };
