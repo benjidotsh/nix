@@ -47,6 +47,7 @@
         "mas"
         "folderify"
         "volta"
+        "gh"
       ]
       ++ (lib.optionals (profile == "personal") [
         "bun"
@@ -86,7 +87,6 @@
         "session-manager-plugin"
         "nosql-workbench"
         "docker-desktop"
-        "codex"
         "kiro"
       ]);
 
