@@ -16,6 +16,7 @@
       ./opnix.nix
       ./claude-code.nix
       ./codex.nix
+      ./opencode.nix
     ]
     ++ (lib.optionals (profile == "work") [
       ./direnv.nix

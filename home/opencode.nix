@@ -1,29 +1,34 @@
 {...}: {
-  programs.claude-code = {
+  programs.opencode = {
     enable = true;
 
-    mcpServers = {
-      context7 = {
-        command = "npx";
-        args = ["-y" "@upstash/context7-mcp"];
-      };
-
-      github = {
-        type = "http";
-        url = "https://api.githubcopilot.com/mcp";
-        headers = {
-          Authorization = "Bearer \${GITHUB_PAT}";
+    settings = {
+      mcp = {
+        context7 = {
+          type = "local";
+          command = ["npx" "-y" "@upstash/context7-mcp" "--api-key" "{env:CONTEXT7_API_KEY}"];
+          enabled = true;
         };
-      };
 
-      shadcn = {
-        command = "npx";
-        args = ["shadcn@latest" "mcp"];
+        github = {
+          type = "remote";
+          url = "https://api.githubcopilot.com/mcp";
+          headers = {
+            Authorization = "Bearer {env:GITHUB_PAT}";
+          };
+          enabled = true;
+        };
+
+        shadcn = {
+          type = "local";
+          args = ["npx" "shadcn@latest" "mcp"];
+          enabled = true;
+        };
       };
     };
 
-    memory.text = ''
-      # Memory
+    rules = ''
+      # Custom instructions
 
       ## DON'T talk too much
 

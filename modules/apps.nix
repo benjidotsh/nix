@@ -87,7 +87,6 @@
         "session-manager-plugin"
         "nosql-workbench"
         "docker-desktop"
-        "kiro"
       ]);
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
