@@ -1,26 +1,18 @@
-{
-  username,
-  lib,
-  profile,
-  ...
-}: {
+{username, ...}: {
   # import sub modules
-  imports =
-    [
-      ./shell.nix
-      ./core.nix
-      ./vscode.nix
-      ./git.nix
-      ./starship
-      ./ssh.nix
-      ./opnix.nix
-      ./claude-code.nix
-      ./codex.nix
-      ./opencode.nix
-    ]
-    ++ (lib.optionals (profile == "work") [
-      ./direnv.nix
-    ]);
+  imports = [
+    ./shell.nix
+    ./core.nix
+    ./vscode.nix
+    ./git.nix
+    ./starship
+    ./ssh.nix
+    ./opnix.nix
+    ./claude-code.nix
+    ./codex.nix
+    ./opencode.nix
+    ./direnv.nix
+  ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.

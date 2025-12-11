@@ -48,6 +48,7 @@
         "folderify"
         "volta"
         "gh"
+        "specify"
       ]
       ++ (lib.optionals (profile == "personal") [
         "bun"
@@ -59,7 +60,6 @@
         "sops"
         "aws-sam-cli"
         "valkey"
-        "specify"
       ]);
 
     # `brew install --cask`
