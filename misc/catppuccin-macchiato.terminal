@@ -147,16 +147,18 @@
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
 	<key>BackgroundBlur</key>
-	<real>0.0</real>
+	<real>1</real>
 	<key>BackgroundColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
-	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC4xNDExNzY0NzcxIDAuMTUyOTQxMTgy
-	MyAwLjIyNzQ1MDk4MTcAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
-	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
-	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxArMC4xNDExNzY0NzcxIDAuMTUyOTQxMTgy
+	MyAwLjIyNzQ1MDk4MTcgMC45ABABgALSFBUWF1okY2xhc3NuYW1lWCRjbGFzc2VzV05T
+	Q29sb3KiFhhYTlNPYmplY3QIERokKTI3SUxRU1ddZGp3fqyusLXAydHUAAAAAAAAAQEA
+	AAAAAAAAGQAAAAAAAAAAAAAAAAAAAN0=
 	</data>
+	<key>Bell</key>
+	<false/>
 	<key>BoldTextColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -210,5 +212,7 @@
 	<string>catppuccin-macchiato</string>
 	<key>type</key>
 	<string>Window Settings</string>
+	<key>useOptionAsMetaKey</key>
+	<false/>
 </dict>
 </plist>
