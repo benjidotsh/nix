@@ -70,6 +70,7 @@
         "1password"
         "monitorcontrol"
         "copilot-cli"
+        "leapp"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
@@ -83,7 +84,6 @@
       ++ (lib.optionals (profile == "work") [
         "postgres-unofficial"
         "httpie-desktop"
-        "leapp"
         "dbeaver-community"
         "session-manager-plugin"
         "nosql-workbench"
