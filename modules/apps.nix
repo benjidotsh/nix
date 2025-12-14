@@ -69,6 +69,7 @@
         "spotify"
         "1password"
         "monitorcontrol"
+        "copilot-cli"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
