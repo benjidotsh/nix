@@ -28,7 +28,6 @@
         "The Unarchiver" = 425424353;
         "Boop" = 1518425043;
         "Spark Classic" = 1176895641;
-        "Messenger" = 1480068668;
         "WhatsApp Messenger" = 310633997;
         "1Password for Safari" = 1569813296;
         "TestFlight" = 899247664;
@@ -49,6 +48,7 @@
         "volta"
         "gh"
         "specify"
+        "awscli"
       ]
       ++ (lib.optionals (profile == "personal") [
         "bun"
@@ -56,7 +56,6 @@
         "cocoapods"
       ])
       ++ (lib.optionals (profile == "work") [
-        "awscli"
         "sops"
         "aws-sam-cli"
         "valkey"
@@ -71,6 +70,7 @@
         "monitorcontrol"
         "copilot-cli"
         "leapp"
+        "session-manager-plugin"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
@@ -80,12 +80,12 @@
         "adobe-acrobat-reader"
         "beid-token"
         "orbstack"
+        "conductor"
       ])
       ++ (lib.optionals (profile == "work") [
         "postgres-unofficial"
         "httpie-desktop"
         "dbeaver-community"
-        "session-manager-plugin"
         "nosql-workbench"
         "docker-desktop"
       ]);
