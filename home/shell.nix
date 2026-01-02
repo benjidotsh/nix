@@ -32,7 +32,6 @@
         VOLTA_HOME = "$HOME/.volta";
         CONTEXT7_API_KEY = "$(cat ${config.home.homeDirectory}/.config/opnix/context7)";
         GITHUB_PAT = "$(cat ${config.home.homeDirectory}/.config/opnix/github)";
-        DISABLE_AUTOUPDATER = "1"; # recommended for Claude Code
       }
       // (lib.optionalAttrs (profile == "work") {
         AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
