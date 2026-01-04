@@ -71,6 +71,8 @@
         "copilot-cli"
         "leapp"
         "session-manager-plugin"
+        "antigravity"
+        "helium-browser"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
