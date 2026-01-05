@@ -23,6 +23,17 @@
       terminal = {
         font_family = "MesloLGS Nerd Font";
       };
+      languages = {
+        Nix = {
+          language_servers = ["nixd" "!nil"];
+          formatter = {
+            external = {
+              command = "alejandra";
+              arguments = ["--quiet" "--"];
+            };
+          };
+        };
+      };
     };
 
     mutableUserSettings = false;
