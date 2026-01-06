@@ -7,6 +7,8 @@
   programs.vscode = {
     enable = true;
 
+    package = pkgs.code-cursor;
+
     profiles.default = {
       extensions = with pkgs.vscode-marketplace;
       with pkgs.vscode-marketplace-release;
@@ -19,10 +21,6 @@
           # Catppuccin
           catppuccin.catppuccin-vsc
           catppuccin.catppuccin-vsc-icons
-
-          # GitHub Copilot
-          github.copilot
-          github.copilot-chat
         ]
         ++ (lib.optionals (profile == "personal") [
           bradlc.vscode-tailwindcss
@@ -32,12 +30,9 @@
         ]);
       userSettings =
         {
-          # Visual Studio Code
-          "workbench.startupEditor" = "none";
-          "security.workspace.trust.enabled" = false;
+          # Cursor
           "editor.fontFamily" = "MesloLGS Nerd Font, Menlo, Monaco, 'Courier New', monospace";
           "editor.tabSize" = 2;
-          "editor.fontLigatures" = true;
 
           # Prettier
           "editor.defaultFormatter" = "esbenp.prettier-vscode";
@@ -70,20 +65,12 @@
             "editor.defaultFormatter" = "jnoortheen.nix-ide";
           };
 
-          # GitHub Copilot
-          "github.copilot.enable" = {
-            "*" = true;
-            "plaintext" = false;
-            "markdown" = true;
-            "scminput" = false;
-          };
-          "github.copilot.nextEditSuggestions.enabled" = true;
-          "chat.tools.autoApprove" = true;
-          "chat.agent.maxRequests" = 100;
-
           # JavaScript/TypeScript
           "typescript.preferences.importModuleSpecifier" = "non-relative";
           "javascript.preferences.importModuleSpecifier" = "non-relative";
+
+          # Cursor
+          "window.commandCenter" = true;
         }
         // (lib.optionalAttrs (profile == "personal") {
           # Prisma
