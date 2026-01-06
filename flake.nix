@@ -50,9 +50,7 @@
     };
 
     nix-vscode-extensions = {
-      # TODO: switch back to nix-community repo when their PR is merged
-      # url = "github:nix-community/nix-vscode-extensions";
-      url = "github:dseum/nix-vscode-extensions";
+      url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

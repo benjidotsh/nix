@@ -33,7 +33,7 @@
             {app = "/Applications/Spark.app";}
             {app = "/Applications/Discord.app";}
             {app = "/Applications/Spotify.app";}
-            {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
+            {app = "${pkgs.code-cursor}/Applications/Cursor.app";}
             {app = "/System/Applications/Utilities/Terminal.app";}
           ]
           else [
@@ -43,7 +43,7 @@
             {app = "/Applications/Slack.app";}
             {app = "/Applications/Discord.app";}
             {app = "/Applications/Spotify.app";}
-            {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
+            {app = "${pkgs.code-cursor}/Applications/Cursor.app";}
             {app = "/System/Applications/Utilities/Terminal.app";}
           ];
 
