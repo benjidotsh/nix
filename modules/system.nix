@@ -43,7 +43,7 @@
             {app = "/Applications/Slack.app";}
             {app = "/Applications/Discord.app";}
             {app = "/Applications/Spotify.app";}
-            {app = "${pkgs.zed-editor}/Applications/Zed.app";}
+            {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
             {app = "/System/Applications/Utilities/Terminal.app";}
           ];
 
