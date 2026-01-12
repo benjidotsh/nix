@@ -88,7 +88,7 @@
         system = "aarch64-darwin";
         username = "benji";
       };
-      "BEP6NDVF74Q5" = {
+      "P6NDVF74Q5" = {
         profile = "work";
         system = "aarch64-darwin";
         username = "bejanssens";
