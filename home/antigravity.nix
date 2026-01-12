@@ -7,7 +7,7 @@
   programs.vscode = {
     enable = true;
 
-    package = pkgs.code-cursor;
+    package = pkgs.antigravity;
 
     profiles.default = {
       extensions = with pkgs.vscode-marketplace;
@@ -30,7 +30,7 @@
         ]);
       userSettings =
         {
-          # Cursor
+          # Antigravity
           "editor.fontFamily" = "MesloLGS Nerd Font, Menlo, Monaco, 'Courier New', monospace";
           "editor.tabSize" = 2;
 
@@ -68,9 +68,6 @@
           # JavaScript/TypeScript
           "typescript.preferences.importModuleSpecifier" = "non-relative";
           "javascript.preferences.importModuleSpecifier" = "non-relative";
-
-          # Cursor
-          "window.commandCenter" = true;
         }
         // (lib.optionalAttrs (profile == "personal") {
           # Prisma

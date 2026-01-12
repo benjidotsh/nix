@@ -3,7 +3,7 @@
   imports = [
     ./shell.nix
     ./core.nix
-    ./cursor.nix
+    ./antigravity.nix
     ./git.nix
     ./starship
     ./ssh.nix
