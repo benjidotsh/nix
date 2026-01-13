@@ -17,6 +17,7 @@
           dbaeumer.vscode-eslint
           eamodio.gitlens
           jnoortheen.nix-ide
+          jlcodes.antigravity-cockpit
 
           # Catppuccin
           catppuccin.catppuccin-vsc
@@ -31,6 +32,7 @@
       userSettings =
         {
           # Antigravity
+          "security.workspace.trust.enabled" = false;
           "editor.fontFamily" = "MesloLGS Nerd Font, Menlo, Monaco, 'Courier New', monospace";
           "editor.tabSize" = 2;
 
