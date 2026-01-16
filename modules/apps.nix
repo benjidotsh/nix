@@ -46,8 +46,6 @@
         "mas"
         "folderify"
         "volta"
-        "gh"
-        "specify"
         "awscli"
       ]
       ++ (lib.optionals (profile == "personal") [
@@ -81,7 +79,6 @@
         "adobe-acrobat-reader"
         "beid-token"
         "orbstack"
-        "conductor"
       ])
       ++ (lib.optionals (profile == "work") [
         "postgres-unofficial"
