@@ -7,8 +7,6 @@
   programs.vscode = {
     enable = true;
 
-    package = pkgs.antigravity;
-
     profiles.default = {
       extensions = with pkgs.vscode-marketplace;
       with pkgs.vscode-marketplace-release;
@@ -17,7 +15,7 @@
           dbaeumer.vscode-eslint
           eamodio.gitlens
           jnoortheen.nix-ide
-          jlcodes.antigravity-cockpit
+          github.copilot-chat
 
           # Catppuccin
           catppuccin.catppuccin-vsc
@@ -31,7 +29,8 @@
         ]);
       userSettings =
         {
-          # Antigravity
+          # Visual Studio Code
+          "workbench.startupEditor" = "none";
           "security.workspace.trust.enabled" = false;
           "editor.fontFamily" = "MesloLGS Nerd Font, Menlo, Monaco, 'Courier New', monospace";
           "editor.tabSize" = 2;
@@ -67,6 +66,17 @@
             "editor.defaultFormatter" = "jnoortheen.nix-ide";
           };
 
+          # GitHub Copilot
+          "github.copilot.enable" = {
+            "*" = true;
+            "plaintext" = false;
+            "markdown" = true;
+            "scminput" = false;
+          };
+          "github.copilot.nextEditSuggestions.enabled" = true;
+          "chat.agent.maxRequests" = 100;
+          "chat.useAgentSkills" = true;
+
           # JavaScript/TypeScript
           "typescript.preferences.importModuleSpecifier" = "non-relative";
           "javascript.preferences.importModuleSpecifier" = "non-relative";
@@ -79,6 +89,6 @@
         });
     };
 
-    mutableExtensionsDir = true;
+    mutableExtensionsDir = profile == "personal";
   };
 }
