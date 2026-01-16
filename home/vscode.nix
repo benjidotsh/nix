@@ -87,6 +87,30 @@
             "editor.defaultFormatter" = "prisma.prisma";
           };
         });
+
+      userMcp = {
+        servers = {
+          "io.github.upstash/context7" = {
+            type = "stdio";
+            command = "npx";
+            args = ["@upstash/context7-mcp@latest"];
+          };
+
+          "microsoft/playwright-mcp" = {
+            type = "stdio";
+            command = "npx";
+            args = ["@playwright/mcp@latest"];
+          };
+
+          "io.github.github/github-mcp-server" = {
+            type = "http";
+            url = "https://api.githubcopilot.com/mcp";
+            headers = {
+              Authorization = "Bearer \${env:GITHUB_PAT}";
+            };
+          };
+        };
+      };
     };
 
     mutableExtensionsDir = profile == "personal";
