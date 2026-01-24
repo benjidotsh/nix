@@ -28,7 +28,6 @@
         "The Unarchiver" = 425424353;
         "Boop" = 1518425043;
         "Spark Classic" = 1176895641;
-        "WhatsApp Messenger" = 310633997;
         "1Password for Safari" = 1569813296;
         "TestFlight" = 899247664;
       }
@@ -76,7 +75,7 @@
         "bambu-studio"
         "autodesk-fusion"
         "openscad@snapshot"
-        "adobe-acrobat-reader"
+        # "adobe-acrobat-reader"
         "beid-token"
         "orbstack"
       ])
