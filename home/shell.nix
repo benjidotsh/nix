@@ -41,7 +41,8 @@
     sessionPath = ["$VOLTA_HOME/bin"];
 
     shellAliases = {
-      update = "(cd ~/nix; git pull; just deploy)";
+      sync = "(cd ~/nix; git pull; just deploy)";
+      update = "(cd ~/nix; just up; git add flake.lock; git commit -m 'Update flake.lock'; git push; just deploy)";
     };
   };
 }
