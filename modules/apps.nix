@@ -46,6 +46,7 @@
         "folderify"
         "volta"
         "awscli"
+        "opencode"
       ]
       ++ (lib.optionals (profile == "personal") [
         "bun"
@@ -85,6 +86,7 @@
         "dbeaver-community"
         "nosql-workbench"
         "docker-desktop"
+        "claude-code"
       ]);
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
