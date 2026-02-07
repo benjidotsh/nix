@@ -70,6 +70,7 @@
         "leapp"
         "session-manager-plugin"
         "helium-browser"
+        "codex-app"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
