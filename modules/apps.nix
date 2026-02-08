@@ -71,6 +71,7 @@
         "session-manager-plugin"
         "helium-browser"
         "codex-app"
+        "claude-code"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
@@ -87,7 +88,6 @@
         "dbeaver-community"
         "nosql-workbench"
         "docker-desktop"
-        "claude-code"
       ]);
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
