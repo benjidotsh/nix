@@ -36,9 +36,11 @@
       // (lib.optionalAttrs (profile == "work") {
         AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
         NODE_EXTRA_CA_CERTS = "$HOME/.zcli/zscaler_root.pem";
+        ARTIFACTORY_API_KEY = "$(cat ${config.home.homeDirectory}/.config/opnix/artifactory)";
+        GOPROXY = "https://bejanssens:$ARTIFACTORY_API_KEY@artifactory.persgroep.cloud/artifactory/api/go/go,https://proxy.golang.org,direct";
       });
 
-    sessionPath = ["$VOLTA_HOME/bin"];
+    sessionPath = ["$VOLTA_HOME/bin"] ++ (lib.optionals (profile == "work") ["$HOME/go/bin"]);
 
     shellAliases = {
       nix-sync = "(cd ~/nix; git pull; just deploy)";
