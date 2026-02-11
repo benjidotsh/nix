@@ -71,7 +71,6 @@
         "session-manager-plugin"
         "helium-browser"
         "codex-app"
-        "claude-code"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
