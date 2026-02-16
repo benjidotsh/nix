@@ -30,7 +30,6 @@
           then [
             {app = "/System/Applications/Apps.app";}
             {app = "/System/Cryptexes/App/System/Applications/Safari.app";}
-            {app = "/Applications/Spark.app";}
             {app = "/Applications/Discord.app";}
             {app = "/Applications/Spotify.app";}
             {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
@@ -39,7 +38,6 @@
           else [
             {app = "/System/Applications/Apps.app";}
             {app = "/Applications/Helium.app";}
-            {app = "/Applications/Spark.app";}
             {app = "/Applications/Slack.app";}
             {app = "/Applications/Discord.app";}
             {app = "/Applications/Spotify.app";}

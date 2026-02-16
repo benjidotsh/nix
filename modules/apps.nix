@@ -27,12 +27,10 @@
       {
         "The Unarchiver" = 425424353;
         "Boop" = 1518425043;
-        "Spark Classic" = 1176895641;
-        "1Password for Safari" = 1569813296;
-        "TestFlight" = 899247664;
       }
       // (lib.optionalAttrs (profile == "personal") {
         "Xcode" = 497799835;
+        "1Password for Safari" = 1569813296;
       })
       // (lib.optionalAttrs (profile == "work") {
         "Slack" = 803453959;
@@ -42,11 +40,8 @@
     brews =
       [
         "just"
-        "mas"
         "folderify"
         "volta"
-        "awscli"
-        "opencode"
       ]
       ++ (lib.optionals (profile == "personal") [
         "bun"
@@ -55,7 +50,10 @@
       ])
       ++ (lib.optionals (profile == "work") [
         "sops"
+        "awscli"
         "aws-sam-cli"
+        "leapp"
+        "session-manager-plugin"
         "valkey"
       ]);
 
@@ -67,20 +65,18 @@
         "1password"
         "monitorcontrol"
         "copilot-cli"
-        "leapp"
-        "session-manager-plugin"
-        "helium-browser"
-        "codex-app"
         "claude"
+        "conductor"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
         "bambu-studio"
         "autodesk-fusion"
         "openscad@snapshot"
-        # "adobe-acrobat-reader"
+        "adobe-acrobat-reader"
         "beid-token"
         "orbstack"
+        "codex-app"
       ])
       ++ (lib.optionals (profile == "work") [
         "postgres-unofficial"
@@ -88,6 +84,7 @@
         "dbeaver-community"
         "nosql-workbench"
         "docker-desktop"
+        "helium-browser"
       ]);
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641

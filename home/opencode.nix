@@ -1,5 +1,5 @@
 {...}: {
-  programs.claude-code = {
+  programs.opencode = {
     enable = true;
     enableMcpIntegration = true;
   };
