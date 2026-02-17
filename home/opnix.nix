@@ -17,7 +17,10 @@
         };
 
         github = {
-          reference = "op://Nix/Secrets/GitHub";
+          reference =
+            if profile == "work"
+            then "op://Nix/Secrets/GitHub DPG Media"
+            else "op://Nix/Secrets/GitHub";
           path = ".config/opnix/github";
           mode = "0600";
         };
