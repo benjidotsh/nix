@@ -52,8 +52,6 @@
         "sops"
         "awscli"
         "aws-sam-cli"
-        "leapp"
-        "session-manager-plugin"
         "valkey"
       ]);
 
@@ -85,6 +83,8 @@
         "nosql-workbench"
         "docker-desktop"
         "helium-browser"
+        "leapp"
+        "session-manager-plugin"
       ]);
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
