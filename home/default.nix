@@ -15,9 +15,7 @@
       ./ssh.nix
       ./opnix.nix
       ./direnv.nix
-      ./mcp.nix
       ./claude-code.nix
-      ./opencode.nix
     ]
     ++ (lib.optionals (profile == "work") [
       ./go.nix
