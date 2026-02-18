@@ -42,6 +42,7 @@
         "just"
         "folderify"
         "volta"
+        "gh"
       ]
       ++ (lib.optionals (profile == "personal") [
         "bun"
