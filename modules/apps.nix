@@ -40,6 +40,7 @@
     brews =
       [
         "just"
+        "mas"
         "folderify"
         "volta"
         "gh"

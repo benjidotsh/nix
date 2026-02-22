@@ -16,6 +16,7 @@
           eamodio.gitlens
           jnoortheen.nix-ide
           github.copilot-chat
+          anthropic.claude-code
 
           # Catppuccin
           catppuccin.catppuccin-vsc
