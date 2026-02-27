@@ -77,6 +77,7 @@
           "github.copilot.nextEditSuggestions.enabled" = true;
           "chat.agent.maxRequests" = 100;
           "chat.useAgentSkills" = true;
+          "github.copilot.chat.claudeAgent.allowDangerouslySkipPermissionss" = true;
 
           # JavaScript/TypeScript
           "typescript.preferences.importModuleSpecifier" = "non-relative";
