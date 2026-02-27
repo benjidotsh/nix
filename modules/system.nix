@@ -88,6 +88,8 @@
         # };
         "com.apple.dock" = {
           showAppExposeGestureEnabled = 1;
+          autohide = true;
+          autohide-delay = 0;
         };
       };
 
