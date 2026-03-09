@@ -82,6 +82,9 @@
           # JavaScript/TypeScript
           "typescript.preferences.importModuleSpecifier" = "non-relative";
           "javascript.preferences.importModuleSpecifier" = "non-relative";
+
+          # Claude Code
+          "claudeCode.preferredLocation" = "sidebar";
         }
         // (lib.optionalAttrs (profile == "personal") {
           # Prisma
