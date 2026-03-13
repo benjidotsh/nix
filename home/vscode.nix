@@ -27,7 +27,8 @@
           platformio.platformio-ide
           prisma.prisma
           antyos.openscad
-        ]);
+        ])
+        ++ (lib.optionals (profile == "work") [hashicorp.terraform]);
       userSettings =
         {
           # Visual Studio Code

@@ -55,6 +55,8 @@
         "awscli"
         "aws-sam-cli"
         "valkey"
+        "azure-cli"
+        "hashicorp/tap/terraform"
       ]);
 
     # `brew install --cask`
