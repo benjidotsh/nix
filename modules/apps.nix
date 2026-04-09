@@ -81,7 +81,7 @@
         "codex-app"
       ])
       ++ (lib.optionals (profile == "work") [
-        "postgres-unofficial"
+        "postgres-app"
         "httpie-desktop"
         "dbeaver-community"
         "nosql-workbench"
