@@ -62,6 +62,8 @@
     darwin-custom-icons.url = "github:ryanccn/nix-darwin-custom-icons";
 
     opnix.url = "github:brizzbuzz/opnix";
+
+    claude-code.url = "github:sadjow/claude-code-nix";
   };
 
   # The `outputs` function will return all the build results of the flake.

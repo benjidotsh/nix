@@ -3,6 +3,7 @@
   lib,
   profile,
   nix-vscode-extensions,
+  claude-code,
   ...
 }: {
   environment.variables.EDITOR = "code --wait";
@@ -101,6 +102,7 @@
 
     overlays = [
       nix-vscode-extensions.overlays.default
+      claude-code.overlays.default
     ];
   };
 }
