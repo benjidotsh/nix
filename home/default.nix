@@ -16,7 +16,6 @@
       ./opnix.nix
       ./direnv.nix
       ./claude-code.nix
-      ./zed.nix
     ]
     ++ (lib.optionals (profile == "work") [
       ./go.nix
