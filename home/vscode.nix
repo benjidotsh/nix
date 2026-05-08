@@ -28,7 +28,10 @@
           prisma.prisma
           antyos.openscad
         ])
-        ++ (lib.optionals (profile == "work") [hashicorp.terraform]);
+        ++ (lib.optionals (profile == "work") [
+          hashicorp.terraform
+          golang.go
+        ]);
       userSettings =
         {
           # Visual Studio Code

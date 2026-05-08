@@ -20,6 +20,8 @@
 
     memory.text = ''
       - Be extremely concise. Sacrifice grammar for the sake of concision.
+      - Prefer minimal, happy-path solutions. Do NOT over-engineer (e.g., dedup pools, helper exports, service-layer abstractions) unless explicitly requested.
+      - Prefer libraries over custom code when a well-known library covers the use case.
     '';
   };
 }
