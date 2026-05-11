@@ -69,7 +69,7 @@
         "monitorcontrol"
         "copilot-cli"
         "claude"
-        "conductor"
+        "codex-app"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
@@ -79,7 +79,6 @@
         "adobe-acrobat-reader"
         "beid-token"
         "orbstack"
-        "codex-app"
       ])
       ++ (lib.optionals (profile == "work") [
         "postgres-app"
