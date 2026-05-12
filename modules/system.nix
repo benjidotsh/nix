@@ -33,7 +33,7 @@
             {app = "/Applications/Discord.app";}
             {app = "/Applications/Spotify.app";}
             {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
-            {app = "/System/Applications/Utilities/Terminal.app";}
+            {app = "${pkgs.ghostty-bin}/Applications/Ghostty.app";}
           ]
           else [
             {app = "/System/Applications/Apps.app";}
@@ -42,7 +42,7 @@
             {app = "/Applications/Discord.app";}
             {app = "/Applications/Spotify.app";}
             {app = "${pkgs.vscode}/Applications/Visual Studio Code.app";}
-            {app = "/System/Applications/Utilities/Terminal.app";}
+            {app = "${pkgs.ghostty-bin}/Applications/Ghostty.app";}
           ];
 
         persistent-others = [
