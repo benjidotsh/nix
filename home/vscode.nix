@@ -17,6 +17,7 @@
           jnoortheen.nix-ide
           github.copilot-chat
           anthropic.claude-code
+          bierner.markdown-mermaid
 
           # Catppuccin
           catppuccin.catppuccin-vsc
