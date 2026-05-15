@@ -79,6 +79,8 @@
         "adobe-acrobat-reader"
         "beid-token"
         "orbstack"
+        "zulu@17"
+        "android-studio"
       ])
       ++ (lib.optionals (profile == "work") [
         "postgres-app"
