@@ -18,6 +18,7 @@
           github.copilot-chat
           anthropic.claude-code
           bierner.markdown-mermaid
+          openai.chatgpt
 
           # Catppuccin
           catppuccin.catppuccin-vsc
