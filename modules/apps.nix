@@ -35,6 +35,7 @@
       })
       // (lib.optionalAttrs (profile == "work") {
         "Slack" = 803453959;
+        "Hidden Bar" = 1452453066;
       });
 
     # `brew install`
