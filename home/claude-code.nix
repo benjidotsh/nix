@@ -13,7 +13,7 @@
         type = "http";
         url = "https://api.githubcopilot.com/mcp";
         headers = {
-          Authorization = "Bearer \${GITHUB_PAT}";
+          Authorization = "Bearer \${GH_TOKEN}";
         };
       };
     };
