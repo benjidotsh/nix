@@ -31,7 +31,7 @@
       {
         VOLTA_HOME = "$HOME/.volta";
         CONTEXT7_API_KEY = "$(cat ${config.home.homeDirectory}/.config/opnix/context7)";
-        GITHUB_PAT = "$(cat ${config.home.homeDirectory}/.config/opnix/github)";
+        GH_TOKEN = "$(cat ${config.home.homeDirectory}/.config/opnix/github)";
       }
       // (lib.optionalAttrs (profile == "personal") {
         JAVA_HOME = "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home";
