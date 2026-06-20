@@ -82,6 +82,8 @@
         "orbstack"
         "zulu@17"
         "android-studio"
+        "iina"
+        "stremio"
       ])
       ++ (lib.optionals (profile == "work") [
         "postgres-app"
