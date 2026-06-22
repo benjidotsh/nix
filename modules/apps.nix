@@ -28,9 +28,9 @@
       {
         "The Unarchiver" = 425424353;
         "Boop" = 1518425043;
+        "Xcode" = 497799835;
       }
       // (lib.optionalAttrs (profile == "personal") {
-        "Xcode" = 497799835;
         "1Password for Safari" = 1569813296;
       })
       // (lib.optionalAttrs (profile == "work") {
