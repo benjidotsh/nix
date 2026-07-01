@@ -166,6 +166,7 @@
                   trust = {
                     formulae = [
                       "hashicorp/tap/terraform"
+                      "oven-sh/bun/bun"
                     ];
                   };
                 };
