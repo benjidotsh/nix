@@ -127,6 +127,22 @@
         "type": "github"
       }
     },
+    "homebrew-benji": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783260795,
+        "narHash": "sha256-kX1/GAfMry8mgXi2XZ8APMduMgvRKFoyNMGBzevqbcU=",
+        "owner": "benjidotsh",
+        "repo": "homebrew-tap",
+        "rev": "867bbc5a3dff3f1b18cbf212f1bc8e2beed22d81",
+        "type": "github"
+      },
+      "original": {
+        "owner": "benjidotsh",
+        "repo": "homebrew-tap",
+        "type": "github"
+      }
+    },
     "homebrew-bun": {
       "flake": false,
       "locked": {
@@ -162,11 +178,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1783296123,
-        "narHash": "sha256-lanaJdvaHyr0EPXf4NlpvZsAOzCAMFkddmgHmnwAkPY=",
+        "lastModified": 1783324783,
+        "narHash": "sha256-+XFGGQ/CRfJ3QX/oVOEw0WJY0vDv5wFSlBL0uYW1rVQ=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "9ac2e99c2131883e3a47477ccc74b289557b74a0",
+        "rev": "334514a23d6e0ed49fbb3cc1774b48d59388220c",
         "type": "github"
       },
       "original": {
@@ -178,11 +194,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1783296523,
-        "narHash": "sha256-HwVQL1cVwnl8bZOaicQjzP71Xq7ddSEjokcoAWckDkw=",
+        "lastModified": 1783325034,
+        "narHash": "sha256-B3Eo4Po5ZlgaxuuGrxCNBtI04piNQfKp5gw89E6S7Zg=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "bf4bae78c6ec8adcf7d7c315917426364db480b6",
+        "rev": "507e8d01d2da9fac26607a2cfaeb60342be1b66f",
         "type": "github"
       },
       "original": {
@@ -248,11 +264,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783223773,
-        "narHash": "sha256-sOrAAwaYm88FfL+ttI1SE8R26t4YPTHMZBUbVnbYh/M=",
+        "lastModified": 1783310592,
+        "narHash": "sha256-BgUENdi4wzlftAjjfKDyq9jxdZK2c41cp23gsK88bJg=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "8b186aaef70c2fc386ccdaaa513940cb1124e75a",
+        "rev": "aa655f11c8df5f520aeeb106ea464519ec2d300a",
         "type": "github"
       },
       "original": {
@@ -279,11 +295,11 @@
     },
     "nixpkgs-darwin": {
       "locked": {
-        "lastModified": 1783247743,
-        "narHash": "sha256-9b2xGt5CAd6WriPJOZs/EYXq9fGVCeoisYo1P3nhL2Y=",
+        "lastModified": 1783279667,
+        "narHash": "sha256-/NAkDSsve+GNM0Bt6tleJdCGfsTlK89nPjkVOzZMo0s=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c4013e501c048ae7c4a8940c92837636042bf6c3",
+        "rev": "f205b5574fd0cb7da5b702a2da51507b7f4fdd1b",
         "type": "github"
       },
       "original": {
@@ -295,12 +311,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1781577229,
-        "narHash": "sha256-lrp67w8AulE9Ks53n27I45ADSzbOCn4H+CNW1Ck8B+8=",
-        "rev": "567a49d1913ce81ac6e9582e3553dd90a955875f",
-        "revCount": 1017464,
+        "lastModified": 1783279667,
+        "narHash": "sha256-2l8yOB5aYd+05Q9V9Y1YhgbSa1j1o5QX+nvYs5FL80A=",
+        "rev": "f205b5574fd0cb7da5b702a2da51507b7f4fdd1b",
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/DeterminateSystems/nixpkgs-weekly/0.1.1017464%2Brev-567a49d1913ce81ac6e9582e3553dd90a955875f/019f1749-32d6-7283-9e9a-861bd8478e6a/source.tar.gz"
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1028110.f205b5574fd0/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
@@ -348,6 +363,7 @@
         "darwin": "darwin",
         "darwin-custom-icons": "darwin-custom-icons",
         "home-manager": "home-manager",
+        "homebrew-benji": "homebrew-benji",
         "homebrew-bun": "homebrew-bun",
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",

@@ -54,6 +54,11 @@
       flake = false;
     };
 
+    homebrew-benji = {
+      url = "github:benjidotsh/homebrew-tap";
+      flake = false;
+    };
+
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -83,6 +88,7 @@
     homebrew-services,
     homebrew-bun,
     homebrew-hashicorp,
+    homebrew-benji,
     darwin-custom-icons,
     opnix,
     ...
@@ -158,6 +164,7 @@
                     "homebrew/homebrew-services" = homebrew-services;
                     "oven-sh/homebrew-bun" = homebrew-bun;
                     "hashicorp/homebrew-tap" = homebrew-hashicorp;
+                    "benjidotsh/homebrew-tap" = homebrew-benji;
                   };
 
                   # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
@@ -167,6 +174,7 @@
                     formulae = [
                       "hashicorp/tap/terraform"
                       "oven-sh/bun/bun"
+                      "benjidotsh/tap/cloud-app"
                     ];
                   };
                 };
