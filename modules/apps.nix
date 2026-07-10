@@ -70,7 +70,7 @@
         "monitorcontrol"
         "copilot-cli"
         "claude"
-        "codex-app"
+        "chatgpt"
       ]
       ++ (lib.optionals (profile == "personal") [
         "steam"
